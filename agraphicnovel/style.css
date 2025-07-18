@@ -1,30 +1,39 @@
-html, body {
+:root {
+	--backlink-height: 50px; /* Approximate height of the backlink header */
+	--nav-buttons-height: 10vh; /* Approximate height of the navigation buttons */
+  }
+  
+  html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 	font-family: 'Canterbury', cursive;
 	background: #2d2013;
-	overflow: hidden;
+	/* Removed overflow: hidden; to allow scrolling if needed */
   }
   
   .layout {
 	display: none;
-	height: 100vh;
+	height: calc(100vh - var(--backlink-height)); /* Adjust height to account for backlink */
 	width: 100vw;
+	flex-direction: column; /* Ensure vertical stacking for content */
   }
   
   .layout.active {
 	display: flex;
-	flex-direction: column;
   }
   
   .nav-buttons {
-	position: absolute;
-	bottom: 1vh;
+	position: fixed; /* Use fixed to keep it at the bottom */
+	bottom: 0; /* Align to the very bottom */
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	z-index: 10;
+	background-color: #2d2013; /* Add a background to prevent content showing through */
+	padding: 1vh 0; /* Add some vertical padding */
+	box-sizing: border-box; /* Include padding in the width/height */
+	height: var(--nav-buttons-height); /* Set a fixed height */
   }
   
   .nav-buttons button {
@@ -133,9 +142,15 @@ html, body {
   
   
   /* MOBILE STYLES */
+  .mobile {
+	height: calc(100vh - var(--backlink-height)); /* Ensure mobile layout takes up remaining height */
+	display: flex; /* Make it a flex container */
+	flex-direction: column; /* Stack children vertically */
+  }
+  
   .mobile .book {
 	width: 100vw;
-	height: 100vh;
+	height: 100%; /* Book takes up remaining height of the layout */
 	background: url('leather-texture.jpg') #3e2a14;
 	background-size: cover;
 	box-shadow: inset 0 0 60px rgba(0,0,0,0.8);
@@ -148,14 +163,16 @@ html, body {
   .mobile .page {
 	display: none;
 	width: 100vw;
-	height: 100vh;
-	position: absolute;
+	height: 100%; /* Page takes full height of the book */
+	position: absolute; /* Pages are absolutely positioned within the book to stack on top */
 	background: url('parchment-texture.jpg') #f6f1d3;
 	background-size: cover;
 	border: 2px solid #bca77a;
 	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 	flex-direction: column;
 	justify-content: flex-start;
+	box-sizing: border-box; /* Include padding in height */
+	padding-bottom: var(--nav-buttons-height); /* Add padding to account for nav buttons */
   }
   
   .mobile .page.visible {
@@ -163,10 +180,12 @@ html, body {
   }
   
   .mobile .image-section {
-	height: 60vh;
+	height: 60%; /* Take 60% of the available page height */
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 1vh 2vw; /* Add some padding */
+	box-sizing: border-box;
   }
   
   .mobile .image-section img {
@@ -178,13 +197,14 @@ html, body {
   }
   
   .mobile .text-section {
-	height: 30vh;
+	height: 40%; /* Take 40% of the available page height */
 	padding: 1vh 4vw;
 	font-size: 4vw;
 	line-height: 1.5;
 	color: #2d2013;
 	text-align: center;
 	overflow-y: auto;
+	box-sizing: border-box;
   }
   
   /* Cover Page Styles for Mobile */
@@ -226,7 +246,7 @@ html, body {
   
   /* Intro Page Styles for Mobile */
   .mobile .page.intro .text-section {
-	height: 100%;
+	height: 50%; /* Adjust intro page text section height */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -254,4 +274,45 @@ html, body {
   .nav-buttons #nextButton,
   .nav-buttons #backToCoverButton {
 	  display: none;
+  }
+  
+  /* Backlink Blog Styles (Moved and Modified for Header) */
+  #backlink-blog {
+	--color-accent: #3e2a14; /* Matches hover color of buttons */
+	width: 100%;
+	border-bottom: 1px dashed #3e2a14; /* Matches border color */
+	background-color: #5c3a1e; /* Matches button background */
+	padding: 8px;
+	text-align: center; /* Center the text */
+	color: white; /* Text color */
+	font-size: 0.8rem;
+	font-weight: bold;
+	font-family: 'Canterbury', cursive;
+	box-sizing: border-box; /* Include padding and border in the width */
+	height: var(--backlink-height); /* Set a fixed height */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* Removed transform and box-shadow for a cleaner header look */
+	/* Removed position: absolute and z-index as it's now part of flow */
+  }
+  #backlink-blog:hover {
+	  transform: none; /* Remove hover transform */
+  }
+  #backlink-blog a {
+	  text-decoration: none;
+	  color: inherit;
+	  background-image: linear-gradient(to right,
+						var(--color-accent) 0%,
+						var(--color-accent) 100%);
+	  background-size: 0% 100%;
+	  background-position: left center;
+	  background-repeat: no-repeat;
+	  transition: background-size 0.2s ease-in-out;
+	  padding: 0.5rem;
+	  display: inline-block;
+  }
+  #backlink-blog a:hover {
+	  background-size: 100% 100%;
+	  color: white;
   }
