@@ -3,41 +3,33 @@
         @import url('https://fonts.googleapis.com/css2?family=Iowan+Old+Style&display=swap');
 
         #backlink-new-panel {
-            --color-accent: #3c55f8; /* Matches hover color of buttons */
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            border: 1px dashed #3c55f8; /* Matches border color */
-            background-color: #74d1ff; /* Matches button background */
-            padding: 8px;
-            cursor: pointer;
-            color: white; /* Text color */
-            font-size: 0.8rem;
+            --color-accent: #3c55f8;
+            width: 100%;
+            background-color: #74d1ff;
+            padding: 10px 0;
+            color: white;
+            font-size: 1rem;
             font-weight: bold;
-            transition: all 0.3s ease;
-            transform: rotate(-2deg) scale(0.9);
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            border-radius: 0; /* Changed to 0 for full width, no rounded corners */
+            box-sizing: border-box;
             font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
-            z-index: 10;
-        }
-        #backlink-new-panel:hover {
-            transform: rotate(2deg) scale(1);
+            position: relative; /* Ensure it flows normally within the document */
+            top: auto; /* Remove absolute positioning */
+            right: auto; /* Remove absolute positioning */
+            transform: none; /* Remove tilt */
         }
         #backlink-new-panel a {
             text-decoration: none;
             color: inherit;
-            background-image: linear-gradient(to right,
-                                var(--color-accent) 0%,
-                                var(--color-accent) 100%);
-            background-size: 0% 100%;
-            background-position: left center;
-            background-repeat: no-repeat;
-            transition: background-size 0.2s ease-in-out;
-            padding: 0.5rem;
             display: inline-block;
+            padding: 0 15px;
+            transition: background-color 0.3s ease;
         }
         #backlink-new-panel a:hover {
-            background-size: 100% 100%;
+            background-color: var(--color-accent);
             color: white;
         }
     </style>

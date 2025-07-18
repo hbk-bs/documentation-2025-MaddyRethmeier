@@ -3,41 +3,33 @@
         @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap');
 
         #backlink-weather {
-            --color-accent: #4954a5; /* Matches hover color of buttons */
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            border: 1px dashed #4954a5; /* Matches border color */
-            background-color: #6878f2; /* Matches button background */
-            padding: 8px;
-            cursor: pointer;
-            color: white; /* Text color */
-            font-size: 0.8rem;
+            --color-accent: #4954a5;
+            width: 100%;
+            background-color: #6878f2;
+            padding: 10px 0;
+            color: white;
+            font-size: 1rem;
             font-weight: bold;
-            transition: all 0.3s ease;
-            transform: rotate(-2deg) scale(0.9);
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            border-radius: 0; /* Changed to 0 for full width, no rounded corners */
+            box-sizing: border-box;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            z-index: 10;
-        }
-        #backlink-weather:hover {
-            transform: rotate(2deg) scale(1);
+            position: relative; /* Ensure it flows normally within the document */
+            top: auto; /* Remove absolute positioning */
+            right: auto; /* Remove absolute positioning */
+            transform: none; /* Remove tilt */
         }
         #backlink-weather a {
             text-decoration: none;
             color: inherit;
-            background-image: linear-gradient(to right,
-                                var(--color-accent) 0%,
-                                var(--color-accent) 100%);
-            background-size: 0% 100%;
-            background-position: left center;
-            background-repeat: no-repeat;
-            transition: background-size 0.2s ease-in-out;
-            padding: 0.5rem;
             display: inline-block;
+            padding: 0 15px;
+            transition: background-color 0.3s ease;
         }
         #backlink-weather a:hover {
-            background-size: 100% 100%;
+            background-color: var(--color-accent);
             color: white;
         }
     </style>
