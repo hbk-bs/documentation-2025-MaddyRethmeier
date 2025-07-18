@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Light gray background */
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        /* Custom fonts for project panels */
+        /* New font for the 3rd panel */
+        .font-georgia {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: normal;
+        }
+        /* New font for the 1st panel */
+        .font-arial {
+            font-family: Arial, sans-serif;
+        }
+        /* New font for the 2nd panel */
+        .font-sans-serif {
+            font-family: sans-serif;
+        }
+        /* New font for the 5th panel */
+        .font-canterbury {
+            font-family: 'Canterbury', cursive;
+        }
+        /* Font for the new panel */
+        .font-iowan {
+            font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+            font-weight: normal;
+        }
+        /* Font for the AGI panel */
+        .font-helvetica-neue {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        /* Font for the Conclusion panel */
+        .font-american-typewriter {
+            font-family: "American Typewriter", "Courier New", monospace, serif;
+        }
+
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        /* Header Section */
+        header {
+            background:  #1f2937;
+            /*background: linear-gradient(to right, #2563eb, #6d28d9); /* from-blue-600 to-purple-700 */
+            color: white;
+            padding: 1.5rem; /* p-6 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+            border-bottom-left-radius: 0.5rem; /* rounded-b-lg */
+            border-bottom-right-radius: 0.5rem; /* rounded-b-lg */
+        }
+
+        header .container {
+            max-width: 1280px; /* mx-auto */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            letter-spacing: -0.025em; /* tracking-tight */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+
+        header p {
+            font-size: 1.125rem; /* text-lg */
+            opacity: 0.9;
+        }
+
+        /* Main Content - Projects Section */
+        main {
+            flex-grow: 1; /* flex-grow */
+            max-width: 1280px; /* mx-auto */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem; /* p-4 */
+            display: grid;
+            grid-template-columns: 1fr; /* grid-cols-1 */
+            gap: 1.5rem; /* gap-6 */
+        }
+
+        /* Project Panel Styling */
+        .project-panel {
+            padding: 1.5rem; /* p-6 */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+            transition: transform 0.3s ease-in-out; /* transition-transform duration-300 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-panel:hover {
+            transform: scale(1.02); /* hover:scale-[1.02] */
+        }
+
+        .project-panel h2 {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 0.75rem; /* mb-3 */
+        }
+
+        .project-panel p {
+            margin-bottom: 1rem; /* mb-4 */
+        }
+
+        .project-panel img {
+            width: 100%; /* w-full */
+            height: 12rem; /* h-48 */
+            object-fit: contain;
+            border-radius: 0.5rem; /* rounded-lg */
+            margin-bottom: 1rem; /* mb-4 */
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+        }
+
+        .project-panel .links-container {
+            display: flex;
+            flex-direction: column; /* flex-col */
+            justify-content: space-between;
+            gap: 0.75rem; /* gap-3 */
+            margin-top: 1rem; /* mt-4 */
+            align-items: stretch; /* Added to make children fill the width */
+        }
+
+        .project-panel .links-container a {
+            color: white;
+            padding: 0.5rem 1.25rem; /* px-5 py-2 */
+            border-radius: 0.5rem; /* rounded-lg */
+            transition: background-color 0.2s ease-in-out; /* transition-colors duration-200 */
+            text-align: center;
+            font-weight: 600; /* font-semibold */
+            flex: 1; /* flex-1 */
+            text-decoration: none; /* Remove underline from links */
+            display: flex; /* Added for vertical centering of text */
+            align-items: center; /* Added for vertical centering of text */
+            justify-content: center; /* Added for horizontal centering of text */
+            min-height: 2.5rem; /* Explicit min-height for consistent button height */
+        }
+
+        /* Project specific colors */
+        /* The Archiv */
+        .project-panel.new-panel {
+            background-color: #c2ebff;
+        }
+        .project-panel.new-panel h2 {
+            color: #000000;
+        }
+        .project-panel.new-panel p {
+            color: #05090b;
+        }
+        .project-panel.new-panel .links-container a:first-child {
+            background-color: #74d1ff;
+        }
+        .project-panel.new-panel .links-container a:first-child:hover {
+            background-color: #3c55f8;
+        }
+        .project-panel.new-panel .links-container a:last-child {
+            background-color: #74d1ff;
+        }
+        .project-panel.new-panel .links-container a:last-child:hover {
+            background-color: #3c55f8;
+        }
+
+
+        /* Teachable Machine */
+        .project-panel.calculator {
+            background-color:#e4f8fc ; /* bg-blue-100 */
+        }
+        .project-panel.calculator h2 {
+            color: #2e8b57; /* text-blue-800 */
+        }
+        .project-panel.calculator p {
+            color: #555; /* text-blue-700 */
+        }
+        .project-panel.calculator .links-container a:first-child { /* GitHub button */
+            background-color: #4CAF50; /* bg-blue-600 */
+            border:#4CAF50;
+        }
+        .project-panel.calculator .links-container a:first-child:hover {
+            background-color:#45a049 ; /* hover:bg-blue-700 */
+        }
+        .project-panel.calculator .links-container a:last-child { /* Feedback button */
+            background-color: #4CAF50; /* bg-blue-500 */
+            border:#4CAF50;
+        }
+        .project-panel.calculator .links-container a:last-child:hover {
+            background-color:#45a049; /* hover:bg-blue-600 */
+           
+        }
+
+        /* Project 2: Nature of Code */
+        .project-panel.recipe {
+            background-color: #93b4bf; /* bg-green-100 */
+        }
+        .project-panel.recipe h2 {
+            color: #0c253d; /* text-green-800 */
+        }
+        .project-panel.recipe p {
+            color: #164068; /* text-green-700 */
+        }
+        .project-panel.recipe .links-container a:first-child {
+            background-color: #415295; /* bg-green-600 */
+        }
+        .project-panel.recipe .links-container a:first-child:hover {
+            background-color: #28325c; /* hover:bg-green-700 */
+        }
+        .project-panel.recipe .links-container a:last-child {
+            background-color: #415295; /* bg-green-500 */
+        }
+        .project-panel.recipe .links-container a:last-child:hover {
+            background-color: #28325c; /* hover:bg-green-700 */
+           
+        }
+
+        /* Project 3: Text the universal interface */
+        .project-panel.todo {
+            background-color: #f0f0f0;
+        }
+        .project-panel.todo h2 {
+            color: #660000; /* text-yellow-800 */
+        }
+        .project-panel.todo p {
+            color: #990000; /* text-yellow-700 */
+        }
+        .project-panel.todo .links-container a:first-child { /* GitHub button */
+            background-color: #800000; /* Red background */
+            border: 1px solid #800000; /* Darker red border */
+        }
+        .project-panel.todo .links-container a:first-child:hover {
+            background-color: #660000; /* Darker red on hover */
+        }
+        .project-panel.todo .links-container a:last-child { /* Feedback button */
+            background-color: #800000; /* Lighter red background */
+            border: 1px solid #800000; /* Red border */
+        }
+        .project-panel.todo .links-container a:last-child:hover {
+            background-color: #660000; /* Red on hover */
+        }
+
+        /* Project 4: AGI */
+        .project-panel.weather {
+            background-color: #bae2ff; /* bg-red-100 */
+        }
+        .project-panel.weather h2 {
+            color: #28195f; /* text-red-800 */
+        }
+        .project-panel.weather p {
+            color: #311f72; /* text-red-700 */
+        }
+        .project-panel.weather .links-container a:first-child {
+            background-color: #6878f2; /* bg-red-600 */
+        }
+        .project-panel.weather .links-container a:first-child:hover {
+            background-color: #4954a5; /* hover:bg-red-700 */
+        }
+        .project-panel.weather .links-container a:last-child {
+            background-color: #6878f2; /* bg-red-500 */
+        }
+        .project-panel.weather .links-container a:last-child:hover {
+            background-color: #4954a5; /* Red on hover */
+        }
+
+        /* Project 5: Gaphic Novel */
+        .project-panel.blog {
+            background-color: #f6f1d3; /* bg-indigo-50 */
+        }
+        .project-panel.blog h2 {
+            color: #382818; /* text-indigo-800 */
+        }
+        .project-panel.blog p {
+            color: #3e2a14; /* text-indigo-700 */
+        }
+        .project-panel.blog .links-container a:first-child {
+            background-color: #5c3a1e; /* bg-indigo-600 */
+        }
+        .project-panel.blog .links-container a:first-child:hover {
+            background-color: #3e2a14; /* hover:bg-indigo-700 */
+        }
+        .project-panel.blog .links-container a:last-child {
+            background-color: #5c3a1e; /* bg-indigo-500 */
+        }
+        .project-panel.blog .links-container a:last-child:hover {
+            background-color: #3e2a14; /* hover:bg-indigo-600 */
+        }
+
+        /* Project 6: Fazit */
+        .project-panel.ecommerce {
+            background-color: #f5f3ff; /* bg-purple-50 */
+        }
+        .project-panel.ecommerce h2 {
+            color: #421885; /* text-purple-800 */
+        }
+        .project-panel.ecommerce p {
+            color: #4f2598; /* text-purple-700 */
+        }
+        .project-panel.ecommerce .links-container a:first-child {
+            background-color: #6b31d0; /* bg-purple-600 */
+        }
+        .project-panel.ecommerce .links-container a:first-child:hover {
+            background-color: #6d28d9; /* hover:bg-purple-700 */
+        }
+        .project-panel.ecommerce .links-container a:last-child {
+            background-color: #714bca; /* bg-purple-500 */
+        }
+        .project-panel.ecommerce .links-container a:last-child:hover {
+            background-color: #4d2394; /* hover:bg-purple-600 */
+        }
+
+
+        /* Footer Section */
+        footer {
+            background-color: #1f2937; /* bg-gray-800 */
+            color: white;
+            padding: 1.5rem; /* p-6 */
+            text-align: center;
+            margin-top: auto; /* mt-auto */
+            border-top-left-radius: 0.5rem; /* rounded-t-lg */
+            border-top-right-radius: 0.5rem; /* rounded-t-lg */
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* shadow-inner */
+        }
+
+        footer .container {
+            max-width: 1280px; /* mx-auto */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer p {
+            font-size: 0.875rem; /* text-sm */
+        }
+
+        footer p:last-child {
+            font-size: 0.75rem; /* text-xs */
+            margin-top: 0.25rem; /* mt-1 */
+            opacity: 0.8;
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) { /* md breakpoint */
+            header h1 {
+                font-size: 3rem; /* md:text-5xl */
+            }
+            header p {
+                font-size: 1.25rem; /* md:text-xl */
+            }
+            main {
+                padding: 2rem; /* md:p-8 */
+                grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+            }
+            .project-panel .links-container {
+                flex-direction: row; /* sm:flex-row */
+                align-items: center; /* Adjust for row layout if needed, though flex:1 usually handles this */
+            }
+        }
+
+        @media (min-width: 1024px) { /* lg breakpoint */
+            main {
+                grid-template-columns: repeat(3, 1fr); /* lg:grid-cols-3 */
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header>
+        <div class="container">
+            <h1>My GitHub Projects Portfolio</h1>
+            <p>A collection of my coding adventures and creations.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="project-panel new-panel">
+            <div>
+                <h2 class="font-iowan">Maddy's Archive</h2>
+                <p class="font-iowan">This archive collects all my coding projects from the first semester 2024/2025.  The focus in the first semester was mainly on the creation of sketches with p5js and the exploration of creative coding.</p>
+                <img src="image/archiv.jpeg" alt="Maddy's Archive">
+            </div>
+            <div class="links-container">
+                <a href="https://hbk-bs.github.io/the-archives-MaddyRethmeier/" target="_blank" class="font-iowan">
+                    View on GitHub
+                </a>
+                <a href="" class="font-iowan">
+                    My Feedback
+                </a>
+            </div>
+        </div>
+
+        <div class="project-panel calculator">
+            <div>
+                <h2 class="font-arial">Teachable Machine</h2>
+                <p class="font-arial">The "To Cuddle or Not to Cuddle" game was realised with use of "Teachable Maschine". The player is given the choice to cuddle different animals and reliant on their decision is given a score based on my own preference, judged by the teachable maschine model I trained.</p>
+                <img src="image/cuddle.jpg" alt="To Cuddle or Not to Cuddle">
+            </div>
+            <div class="links-container">
+                <a href="https://hbk-bs.github.io/teachable-machine-MaddyRethmeier/" target="_blank" class="font-arial">
+                    View on GitHub
+                </a>
+                <a href="feedback/calculator.html" class="font-arial">
+                    My Feedback
+                </a>
+            </div>
+        </div>
+
+        <div class="project-panel recipe">
+            <div>
+                <h2 class="font-sans-serif">Nature of Code</h2>
+                <p class="font-sans-serif">This code trys to mimic the growth patterns of an oyster shell. Each shell is a variation of ellipses which are slightly distorted each time. With each iteration a new shell is created.</p>
+                <img src="image/shell.jpg" alt="oyster shell">
+            </div>
+            <div class="links-container">
+                <a href="https://hbk-bs.github.io/nature-of-code-MaddyRethmeier/" target="_blank" class="font-sans-serif">
+                    View on GitHub
+                </a>
+                <a href="feedback/recipe.html" class="font-sans-serif">
+                    My Feedback
+                </a>
+            </div>
+        </div>
+
+        <div class="project-panel todo">
+            <div>
+                <h2 class="font-georgia">Text the universal Interface</h2>
+                <p class="font-georgia">In this project a chatbot was promted in such a way, that every output must resemble the AO3 fanfiction layout. The output gives the user an answer which is only partly relevant to the input but provides inspiration for a fanfiction based on the input given.</p>
+                <img src="image/fanfic.jpg" alt="Life is a Fanfiction">
+            </div>
+            <div class="links-container">
+                <a href="https://hbk-bs.github.io/text-the-universal-interface-MaddyRethmeier/" target="_blank" class="font-georgia">
+                    View on GitHub
+                </a>
+                <a href="feedback/todo.html" class="font-georgia">
+                    My Feedback
+                </a>
+            </div>
+        </div>
+
+        <div class="project-panel weather">
+            <div>
+                <h2 class="font-helvetica-neue">AGI-Debate Club</h2>
+                <p class="font-helvetica-neue">We debated the positive and negative aspects of AGI in our class. I was on the team responsible for illumination the dangers and pitfalls of this theorethical technology.</p>
+                <img src="image/agi.jpg" alt="AGI Debate club">
+            </div>
+            <div class="links-container">
+               <a href="Debate Club Team 1.pdf" target="_blank" class="font-helvetica-neue">Keynote</a>
+                    </a>
+                <a href="feedback/calculator.html" class="font-helvetica-neue">
+                    My Feedback
+                </a>
+            </div>
+        </div>
+
+        <div class="project-panel blog">
+            <div>
+                <h2 class="font-canterbury">A generative Novel</h2>
+                <p class="font-canterbury">"A Lions Adventure" is the titel of the novel my group created with the help of Midjourney, Gemini and Chat GPT. The poem tells the story of the statue "Der braunschweiger Löwe" come alive. The lion explores modern day brunswick and remeniscence of times past. </p>
+                <img src="image/lion.jpg" alt="A generative Novel">
+            </div>
+            <div class="links-container">
+                <a href="https://hbk-bs.github.io/a-generative-graphic-novel-finima/" target="_blank" class="font-canterbury">
+                    View on GitHub
+                </a>
+                <a href="feedback/blog.html" class="font-canterbury">
+                    My Feedback
+                </a>
+            </div>
+        </div>
+
+        <div class="project-panel ecommerce">
+            <div>
+                <h2 class="font-american-typewriter">Conclusion</h2>
+                <p class="font-american-typewriter">Here is my conclusion to the second semester in 2025. Here you find an overview of what I learned, liked and despised.</p>
+                <img src="image/conclusion.jpg" alt="Conclusion">
+            </div>
+            <div class="links-container">
+                <a href="feedback/recipe.html" class="font-american-typewriter">
+                    My Feedback
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> MaddyRethmeier. All rights reserved.</p>
+            <p>Designed with HTML, CSS, and a touch of creativity (as well as Googles Gemini).</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to dynamically set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
