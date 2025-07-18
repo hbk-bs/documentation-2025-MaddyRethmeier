@@ -136,7 +136,7 @@
         .project-panel img {
             width: 100%; /* w-full */
             height: 12rem; /* h-48 */
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 0.5rem; /* rounded-lg */
             margin-bottom: 1rem; /* mb-4 */
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
@@ -148,6 +148,7 @@
             justify-content: space-between;
             gap: 0.75rem; /* gap-3 */
             margin-top: 1rem; /* mt-4 */
+            align-items: stretch; /* Added to make children fill the width */
         }
 
         .project-panel .links-container a {
@@ -159,6 +160,10 @@
             font-weight: 600; /* font-semibold */
             flex: 1; /* flex-1 */
             text-decoration: none; /* Remove underline from links */
+            display: flex; /* Added for vertical centering of text */
+            align-items: center; /* Added for vertical centering of text */
+            justify-content: center; /* Added for horizontal centering of text */
+            min-height: 2.5rem; /* Explicit min-height for consistent button height */
         }
 
         /* Project specific colors */
@@ -373,6 +378,7 @@
             }
             .project-panel .links-container {
                 flex-direction: row; /* sm:flex-row */
+                align-items: center; /* Adjust for row layout if needed, though flex:1 usually handles this */
             }
         }
 
@@ -396,8 +402,8 @@
         <div class="project-panel new-panel">
             <div>
                 <h2 class="font-iowan">Maddy's Archive</h2>
-                <p class="font-iowan">This is a description for the new project panel. You can customize this content.</p>
-                <img src="image/archiv.jpeg" alt="New Project Preview">
+                <p class="font-iowan">This archive collects all my coding projects from the first semester 2024/2025.  The focus in the first semester was mainly on the creation of sketches with p5js and the exploration of creative coding.</p>
+                <img src="image/archiv.jpeg" alt="Maddy's Archive">
             </div>
             <div class="links-container">
                 <a href="https://hbk-bs.github.io/the-archives-MaddyRethmeier/" target="_blank" class="font-iowan">
@@ -412,8 +418,8 @@
         <div class="project-panel calculator">
             <div>
                 <h2 class="font-arial">Teachable Machine</h2>
-                <p class="font-arial">A basic web-based calculator built with HTML, CSS, and JavaScript. It handles standard arithmetic operations.</p>
-                <img src="image/cuddle.jpg" alt="Simple Calculator Preview">
+                <p class="font-arial">The "To Cuddle or Not to Cuddle" game was realised with use of "Teachable Maschine". The player is given the choice to cuddle different animals and reliant on their decision is given a score based on my own preference, judged by the teachable maschine model I trained.</p>
+                <img src="image/cuddle.jpg" alt="To Cuddle or Not to Cuddle">
             </div>
             <div class="links-container">
                 <a href="https://hbk-bs.github.io/teachable-machine-MaddyRethmeier/" target="_blank" class="font-arial">
@@ -428,8 +434,8 @@
         <div class="project-panel recipe">
             <div>
                 <h2 class="font-sans-serif">Nature of Code</h2>
-                <p class="font-sans-serif">An application that allows users to search for recipes using various ingredients and dietary preferences.</p>
-                <img src="image/shell.jpg" alt="Recipe Finder App Preview">
+                <p class="font-sans-serif">This code trys to mimic the growth patterns of an oyster shell. Each shell is a variation of ellipses which are slightly distorted each time. With each iteration a new shell is created.</p>
+                <img src="image/shell.jpg" alt="oyster shell">
             </div>
             <div class="links-container">
                 <a href="https://hbk-bs.github.io/nature-of-code-MaddyRethmeier/" target="_blank" class="font-sans-serif">
@@ -444,8 +450,8 @@
         <div class="project-panel todo">
             <div>
                 <h2 class="font-georgia">Text the universal Interface</h2>
-                <p class="font-georgia">A dynamic to-do list where users can add, delete, and mark tasks as complete. Features local storage persistence.</p>
-                <img src="image/fanfic.jpg" alt="Interactive To-Do List Preview">
+                <p class="font-georgia">In this project a chatbot was promted in such a way, that every output must resemble the AO3 fanfiction layout. The output gives the user an answer which is only partly relevant to the input but provides inspiration for a fanfiction based on the input given.</p>
+                <img src="image/fanfic.jpg" alt="Life is a Fanfiction">
             </div>
             <div class="links-container">
                 <a href="https://hbk-bs.github.io/text-the-universal-interface-MaddyRethmeier/" target="_blank" class="font-georgia">
@@ -460,11 +466,11 @@
         <div class="project-panel weather">
             <div>
                 <h2 class="font-helvetica-neue">AGI-Debate Club</h2>
-                <p class="font-helvetica-neue">Fetches and displays current weather conditions and forecasts for cities worldwide using a public API.</p>
-                <img src="image/agi.jpg" alt="Weather Dashboard Preview">
+                <p class="font-helvetica-neue">We debated the positive and negative aspects of AGI in our class. I was on the team responsible for illumination the dangers and pitfalls of this theorethical technology.</p>
+                <img src="image/agi.jpg" alt="AGI Debate club">
             </div>
             <div class="links-container">
-               <a href="Debate Club Team 1.pdf" target="_blank" class="font-helvetica-neue">View Presentation (PDF)</a>
+               <a href="Debate Club Team 1.pdf" target="_blank" class="font-helvetica-neue">Keynote</a>
                     </a>
                 <a href="feedback/calculator.html" class="font-helvetica-neue">
                     My Feedback
@@ -475,8 +481,8 @@
         <div class="project-panel blog">
             <div>
                 <h2 class="font-canterbury">A generative Novel</h2>
-                <p class="font-canterbury">A basic blog application allowing users to create, read, update, and delete blog posts with a minimalist design.</p>
-                <img src="image/lion.jpg" alt="Simple Blog Platform Preview">
+                <p class="font-canterbury">"A Lions Adventure" is the titel of the novel my group created with the help of Midjourney, Gemini and Chat GPT. The poem tells the story of the statue "Der braunschweiger Löwe" come alive. The lion explores modern day brunswick and remeniscence of times past. </p>
+                <img src="image/lion.jpg" alt="A generative Novel">
             </div>
             <div class="links-container">
                 <a href="https://hbk-bs.github.io/a-generative-graphic-novel-finima/" target="_blank" class="font-canterbury">
@@ -491,8 +497,8 @@
         <div class="project-panel ecommerce">
             <div>
                 <h2 class="font-american-typewriter">Conclusion</h2>
-                <p class="font-american-typewriter">A responsive single product page for an e-commerce site, featuring product details, images, and add-to-cart functionality.</p>
-                <img src="https://placehold.co/600x400/ddd6fe/000?text=E-commerce+Preview" alt="E-commerce Product Page Preview">
+                <p class="font-american-typewriter">Here is my conclusion to the second semester in 2025. Here you find an overview of what I learned, liked and despised.</p>
+                <img src="https://placehold.co/600x400/ddd6fe/000?text=E-commerce+Preview" alt="Conclusion">
             </div>
             <div class="links-container">
                 <a href="feedback/recipe.html" class="font-american-typewriter">
@@ -506,7 +512,7 @@
     <footer>
         <div class="container">
             <p>&copy; <span id="current-year"></span> MaddyRethmeier. All rights reserved.</p>
-            <p>Designed with HTML, CSS, and a touch of creativity.</p>
+            <p>Designed with HTML, CSS, and a touch of creativity (as well as Googles Gemini).</p>
         </div>
     </footer>
 
