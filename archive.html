@@ -59,24 +59,31 @@
         }
 
         /* Mobile responsiveness (Increased font sizes significantly) */
-        @media screen and (max-width: 600px) {
-            #backlink-new-panel {
-                font-size: 1.8rem; /* Larger font size for backlink container on mobile */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 18px; /* Increase base font size for better mobile readability */
             }
-            #backlink-new-panel a {
-                font-size: 1.8rem; /* Explicitly larger font size for the link on mobile */
-            }
+
             h1 {
-                font-size: 8vw; /* Scales with viewport width, very large on small screens */
-                word-wrap: break-word; /* Ensure long words break */
+                font-size: 2.5rem; /* Larger heading for mobile */
             }
+
             h2 {
-                font-size: 6vw; /* Scales with viewport width */
-                word-wrap: break-word; /* Ensure long words break */
+                font-size: 2rem; /* Larger sub-heading for mobile */
             }
+
             p {
-                font-size: 1.4rem; /* Significantly larger rem for paragraphs on mobile */
-                line-height: 1.8; /* Increased line height for mobile */
+                font-size: 1.1rem; /* Larger paragraph text for mobile */
+                line-height: 1.8; /* Improve line spacing for readability */
+            }
+
+            /* Adjust backlink font size for mobile */
+            [id^="backlink-"] { /* Targets all backlink divs */
+                font-size: 1.2rem;
+            }
+
+            [id^="backlink-"] a { /* Targets links within backlink divs */
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -87,4 +94,4 @@
     <h1>Maddy's Archive Feedback</h1>
     <h2>Project Overview</h2>
     <p>This section details my thoughts and learnings from the "Maddy's Archive" project.</p>
-    </div>
+</div>
