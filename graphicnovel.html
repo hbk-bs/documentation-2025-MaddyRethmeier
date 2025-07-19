@@ -1,9 +1,25 @@
-<div id="backlink-blog">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Generative Novel Feedback</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Canterbury&display=swap');
 
-        #backlink-blog {
+        :root {
             --color-accent: #3e2a14;
+        }
+
+        body {
+            font-family: 'Canterbury', cursive;
+            background-color: #f6f1d3;
+            color: #3e2a14;
+            margin: 0;
+            padding: 0;
+        }
+
+        #backlink-blog {
             width: 100%;
             background-color: #5c3a1e;
             padding: 10px 0;
@@ -13,14 +29,9 @@
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
-            border-radius: 0;
-            box-sizing: border-box;
             font-family: 'Canterbury', cursive;
-            position: relative;
-            top: auto;
-            right: auto;
-            transform: none;
         }
+
         #backlink-blog a {
             text-decoration: none;
             color: inherit;
@@ -28,26 +39,18 @@
             padding: 0 15px;
             transition: background-color 0.3s ease;
         }
+
         #backlink-blog a:hover {
             background-color: var(--color-accent);
             color: white;
         }
 
-        /* Specific styles for this feedback page */
-        body {
-            font-family: 'Canterbury', cursive;
-            background-color: #f6f1d3; /* Background color from generative-novel in index.html */
-            color: #3e2a14; /* Default text color, matching p */
-            margin: 0;
-            padding: 0;
-        }
-
         h1, h2 {
-            color: #382818; /* H1 and H2 color from generative-novel in index.html */
+            color: #382818;
         }
 
         p {
-            color: #3e2a14; /* Paragraph text color from generative-novel in index.html */
+            color: #3e2a14;
         }
 
         .content {
@@ -55,12 +58,39 @@
             max-width: 800px;
             margin: 0 auto;
         }
-    </style>
-    <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#generative-novel-panel">Back to Documentation</a>
-</div>
 
-<div class="content">
-    <h1>A Generative Novel Feedback</h1>
-    <h2>Project Overview</h2>
-    <p>This section details my thoughts and learnings from the "A Generative Novel" project.</p>
+        @media (max-width: 768px) {
+            #backlink-blog {
+                font-size: 1.1rem;
+                padding: 12px 0;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="backlink-blog">
+        <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#generative-novel-panel">
+            Back to Documentation
+        </a>
     </div>
+
+    <div class="content">
+        <h1>A Generative Novel Feedback</h1>
+        <h2>Project Overview</h2>
+        <p>This section details my thoughts and learnings from the "A Generative Novel" project.</p>
+    </div>
+</body>
+</html>

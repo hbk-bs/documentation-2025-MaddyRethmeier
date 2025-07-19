@@ -1,55 +1,57 @@
-<div id="backlink-new-panel">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maddy's Archive Feedback</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Iowan+Old+Style&display=swap');
 
-        #backlink-new-panel {
+        :root {
             --color-accent: #3c55f8;
+        }
+
+        body {
+            font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+            background-color: #c2ebff;
+            color: #05090b;
+            margin: 0;
+            padding: 0;
+        }
+
+        #backlink-new-panel {
             width: 100%;
             background-color: #74d1ff;
             padding: 10px 0;
             color: white;
-            font-size: 1rem; /* Base font size */
+            font-size: 1rem;
             font-weight: bold;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
-            border-radius: 0;
-            box-sizing: border-box;
             font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
-            position: relative;
-            top: auto;
-            right: auto;
-            transform: none;
         }
+
         #backlink-new-panel a {
             text-decoration: none;
             color: inherit;
             display: inline-block;
             padding: 0 15px;
             transition: background-color 0.3s ease;
-            font-size: 1rem; /* Base font size for the link itself */
         }
+
         #backlink-new-panel a:hover {
             background-color: var(--color-accent);
             color: white;
         }
 
-        /* Specific styles for this feedback page */
-        body {
-            font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
-            background-color: #c2ebff; /* Background color from maddys-archive in index.html */
-            color: #05090b; /* Default text color, matching p */
-            margin: 0;
-            padding: 0;
-        }
-
         h1, h2 {
-            color: #000000; /* H1 and H2 color from maddys-archive in index.html */
+            color: #000000;
         }
 
         p {
-            color: #05090b; /* Paragraph text color from maddys-archive in index.html */
-            line-height: 1.6; /* Default line height for better readability */
+            color: #05090b;
+            line-height: 1.8;
         }
 
         .content {
@@ -58,35 +60,41 @@
             margin: 0 auto;
         }
 
+        @media (max-width: 768px) {
             h1 {
-                font-size: 32px; /* Set h1 font size to 32px for mobile */
+                font-size: 1.6rem;
             }
 
             h2 {
-                font-size: 22px; /* Set h2 font size to 22px for mobile */
+                font-size: 1.3rem;
             }
 
             p {
-                font-size: 16px; /* Set p font size to 16px for mobile */
-                line-height: 1.8; /* Improve line spacing for readability */
+                font-size: 1rem;
             }
 
-            /* Adjust backlink font size and box for mobile */
-            [id^="backlink-"] {
-                font-size: 20px; /* Set backlink font size to 20px */
-                padding: 10px 0; /* Adjust padding for the new font size */
+            #backlink-new-panel {
+                font-size: 1.1rem;
+                padding: 12px 0;
             }
 
-            [id^="backlink-"] a {
-                font-size: 20px; /* Explicitly set link font size to 20px */
+            #backlink-new-panel a {
+                font-size: 1.1rem;
             }
-    
+        }
     </style>
-    <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#maddys-archive-panel">Back to Documentation</a>
-</div>
+</head>
+<body>
+    <div id="backlink-new-panel">
+        <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#maddys-archive-panel">
+            Back to Documentation
+        </a>
+    </div>
 
-<div class="content">
-    <h1>Maddy's Archive Feedback</h1>
-    <h2>Project Overview</h2>
-    <p>This section details my thoughts and learnings from the "Maddy's Archive" project.</p>
-</div>
+    <div class="content">
+        <h1>Maddy's Archive Feedback</h1>
+        <h2>Project Overview</h2>
+        <p>This section details my thoughts and learnings from the "Maddy's Archive" project.</p>
+    </div>
+</body>
+</html>

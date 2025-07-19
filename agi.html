@@ -1,9 +1,25 @@
-<div id="backlink-weather">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AGI-Debate Club Feedback</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap');
 
-        #backlink-weather {
+        :root {
             --color-accent: #4954a5;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #bae2ff;
+            color: #311f72;
+            margin: 0;
+            padding: 0;
+        }
+
+        #backlink-weather {
             width: 100%;
             background-color: #6878f2;
             padding: 10px 0;
@@ -13,14 +29,9 @@
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
-            border-radius: 0;
-            box-sizing: border-box;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            position: relative;
-            top: auto;
-            right: auto;
-            transform: none;
         }
+
         #backlink-weather a {
             text-decoration: none;
             color: inherit;
@@ -28,26 +39,18 @@
             padding: 0 15px;
             transition: background-color 0.3s ease;
         }
+
         #backlink-weather a:hover {
             background-color: var(--color-accent);
             color: white;
         }
 
-        /* Specific styles for this feedback page */
-        body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: #bae2ff; /* Background color from agi-debate in index.html */
-            color: #311f72; /* Default text color, matching p */
-            margin: 0;
-            padding: 0;
-        }
-
         h1, h2 {
-            color: #28195f; /* H1 and H2 color from agi-debate in index.html */
+            color: #28195f;
         }
 
         p {
-            color: #311f72; /* Paragraph text color from agi-debate in index.html */
+            color: #311f72;
         }
 
         .content {
@@ -55,12 +58,39 @@
             max-width: 800px;
             margin: 0 auto;
         }
-    </style>
-    <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#agi-debate-panel">Back to Documentation</a>
-</div>
 
-<div class="content">
-    <h1>AGI-Debate Club Feedback</h1>
-    <h2>Project Overview</h2>
-    <p>This section details my thoughts and learnings from the "AGI-Debate Club" project.</p>
+        @media (max-width: 768px) {
+            #backlink-weather {
+                font-size: 1.1rem;
+                padding: 12px 0;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="backlink-weather">
+        <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#agi-debate-panel">
+            Back to Documentation
+        </a>
     </div>
+
+    <div class="content">
+        <h1>AGI-Debate Club Feedback</h1>
+        <h2>Project Overview</h2>
+        <p>This section details my thoughts and learnings from the "AGI-Debate Club" project.</p>
+    </div>
+</body>
+</html>
