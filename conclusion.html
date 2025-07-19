@@ -1,9 +1,25 @@
-<div id="backlink-ecommerce">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conclusion Feedback</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=American+Typewriter&display=swap');
 
-        #backlink-ecommerce {
+        :root {
             --color-accent: #6d28d9;
+        }
+
+        body {
+            font-family: "American Typewriter", "Courier New", monospace, serif;
+            background-color: #f5f3ff;
+            color: #4f2598;
+            margin: 0;
+            padding: 0;
+        }
+
+        #backlink-ecommerce {
             width: 100%;
             background-color: #6b31d0;
             padding: 10px 0;
@@ -13,14 +29,10 @@
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
-            border-radius: 0;
             box-sizing: border-box;
             font-family: "American Typewriter", "Courier New", monospace, serif;
-            position: relative;
-            top: auto;
-            right: auto;
-            transform: none;
         }
+
         #backlink-ecommerce a {
             text-decoration: none;
             color: inherit;
@@ -28,26 +40,14 @@
             padding: 0 15px;
             transition: background-color 0.3s ease;
         }
+
         #backlink-ecommerce a:hover {
             background-color: var(--color-accent);
             color: white;
         }
 
-        /* Specific styles for this feedback page */
-        body {
-            font-family: "American Typewriter", "Courier New", monospace, serif;
-            background-color: #f5f3ff; /* Background color from conclusion-panel-class in index.html */
-            color: #4f2598; /* Default text color, matching p */
-            margin: 0;
-            padding: 0;
-        }
-
         h1, h2 {
-            color: #421885; /* H1 and H2 color from conclusion-panel-class in index.html */
-        }
-
-        p {
-            color: #4f2598; /* Paragraph text color from conclusion-panel-class in index.html */
+            color: #421885;
         }
 
         .content {
@@ -55,12 +55,44 @@
             max-width: 800px;
             margin: 0 auto;
         }
-    </style>
-    <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#conclusion-panel">Back to Documentation</a>
-</div>
 
-<div class="content">
-    <h1>Conclusion Feedback</h1>
-    <h2>Semester Overview</h2>
-    <p>This section provides my concluding thoughts on the second semester.</p>
+        .content p {
+            color: #4f2598;
+        }
+
+        /* ✅ Responsive styling for mobile */
+        @media (max-width: 768px) {
+            #backlink-ecommerce {
+                font-size: 1.1rem;
+                padding: 12px 0;
+            }
+
+            .content h1 {
+                font-size: 1.5rem;
+            }
+
+            .content h2 {
+                font-size: 1.3rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="backlink-ecommerce">
+        <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#conclusion-panel">
+            Back to Documentation
+        </a>
     </div>
+
+    <div class="content">
+        <h1>Conclusion Feedback</h1>
+        <h2>Semester Overview</h2>
+        <p>This section provides my concluding thoughts on the second semester.</p>
+    </div>
+</body>
+</html>
