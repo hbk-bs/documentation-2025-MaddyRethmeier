@@ -16,7 +16,7 @@
             background-color: #c2ebff; /* Original background color */
             color: #05090b; /* Original body text color */
             margin: 0;
-            padding: 0;
+            padding: 50px 0 0 0; /* Added padding-top to account for fixed backlink */
         }
 
         /* Backlink styles identical to conclusion.html template, preserving original colors and font */
@@ -29,13 +29,14 @@
             font-weight: bold;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
+            /* margin-bottom: 20px; This margin is not effective with position:fixed */
             box-sizing: border-box;
             font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif; /* Original font family for backlink */
-            position: relative;
-            top: auto;
-            right: auto;
+            position: fixed; /* Changed to fixed */
+            top: 0; /* Pinned to top */
+            left: 0; /* Pinned to left */
             transform: none;
+            z-index: 1000; /* Ensure it's on top */
         }
 
         #backlink-ecommerce a {
@@ -83,6 +84,9 @@
             .content p {
                 font-size: 1rem;
                 line-height: 1.6;
+            }
+            body {
+                padding-top: 60px; /* Adjust padding for smaller screens if backlink height changes */
             }
         }
     </style>
