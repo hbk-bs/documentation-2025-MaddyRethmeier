@@ -58,22 +58,24 @@
             margin: 0 auto;
         }
 
-        /* Mobile responsiveness */
+        /* Mobile responsiveness (Increased font sizes significantly) */
         @media screen and (max-width: 600px) {
             #backlink-new-panel {
-                font-size: 1.5rem; /* Larger font size for backlink container on mobile */
+                font-size: 1.8rem; /* Larger font size for backlink container on mobile */
             }
             #backlink-new-panel a {
-                font-size: 1.5rem; /* Explicitly larger font size for the link on mobile */
+                font-size: 1.8rem; /* Explicitly larger font size for the link on mobile */
             }
             h1 {
-                font-size: 2.5rem; /* Significantly larger font size for H1 on mobile */
+                font-size: 8vw; /* Scales with viewport width, very large on small screens */
+                word-wrap: break-word; /* Ensure long words break */
             }
             h2 {
-                font-size: 2rem; /* Significantly larger font size for H2 on mobile */
+                font-size: 6vw; /* Scales with viewport width */
+                word-wrap: break-word; /* Ensure long words break */
             }
             p {
-                font-size: 1.3rem; /* Significantly larger font size for paragraphs on mobile */
+                font-size: 1.4rem; /* Significantly larger rem for paragraphs on mobile */
                 line-height: 1.8; /* Increased line height for mobile */
             }
         }
