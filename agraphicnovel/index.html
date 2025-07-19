@@ -4,8 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>A Lion's Adventure</title>
+  <meta name="theme-color" content="#5c3a1e">
   <link href="https://fonts.googleapis.com/css2?family=Canterbury&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Backlink styles identical to graphicnovel.html */
+    #backlink-blog {
+      width: 100%;
+      background-color: #5c3a1e;
+      padding: 10px 0;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      font-family: cursive, "Brush Script MT", "Lucida Handwriting", sans-serif; /* Changed to match graphicnovel */
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: none;
+      z-index: 1000;
+    }
+
+    #backlink-blog a {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+      padding: 0 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    #backlink-blog a:hover {
+      background-color: #3e2a14; /* Original accent color for hover from graphicnovel */
+      color: white;
+    }
+
+    body {
+        padding-top: 50px; /* Account for fixed backlink height */
+    }
+
+    @media (max-width: 768px) {
+      #backlink-blog {
+        font-size: 1.1rem;
+        padding: 12px 0;
+      }
+      body {
+          padding-top: 60px; /* Adjust padding for smaller screens */
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="backlink-blog">

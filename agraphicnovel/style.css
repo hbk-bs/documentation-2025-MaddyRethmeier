@@ -1,29 +1,28 @@
 :root {
-	--backlink-height: 50px; /* Approximate height of the backlink header */
 	--nav-buttons-height: 10vh; /* Approximate height of the navigation buttons */
-  }
-  
-  html, body {
+}
+
+html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 	font-family: 'Canterbury', cursive;
 	background: #2d2013;
 	/* Removed overflow: hidden; to allow scrolling if needed */
-  }
-  
-  .layout {
+}
+
+.layout {
 	display: none;
-	height: calc(100vh - var(--backlink-height)); /* Adjust height to account for backlink */
+	height: calc(100vh - 50px); /* Adjust height to account for fixed backlink in index.html */
 	width: 100vw;
 	flex-direction: column; /* Ensure vertical stacking for content */
-  }
-  
-  .layout.active {
+}
+
+.layout.active {
 	display: flex;
-  }
-  
-  .nav-buttons {
+}
+
+.nav-buttons {
 	position: fixed; /* Use fixed to keep it at the bottom */
 	bottom: 0; /* Align to the very bottom */
 	width: 100%;
@@ -34,9 +33,9 @@
 	padding: 1vh 0; /* Add some vertical padding */
 	box-sizing: border-box; /* Include padding in the width/height */
 	height: var(--nav-buttons-height); /* Set a fixed height */
-  }
-  
-  .nav-buttons button {
+}
+
+.nav-buttons button {
 	padding: 1.5vh 3vw;
 	font-size: 2.5vw;
 	background-color: #3e2a14;
@@ -45,10 +44,10 @@
 	cursor: pointer;
 	font-family: 'Canterbury', cursive;
 	border-radius: 8px;
-  }
-  
-  /* DESKTOP STYLES */
-  .desktop .book {
+}
+
+/* DESKTOP STYLES */
+.desktop .book {
 	margin: auto;
 	width: 90vw;
 	max-width: 900px;
@@ -61,9 +60,9 @@
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
-  }
-  
-  .desktop .page {
+}
+
+.desktop .page {
 	display: none;
 	width: 100%;
 	height: 100%;
@@ -74,20 +73,20 @@
 	padding: 20px;
 	box-sizing: border-box;
 	flex-direction: row;
-  }
-  
-  .desktop .page.visible {
+}
+
+.desktop .page.visible {
 	display: flex;
-  }
-  
-  .desktop .image-section, .desktop .text-section {
+}
+
+.desktop .image-section, .desktop .text-section {
 	width: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
-  
-  .desktop .text-section {
+}
+
+.desktop .text-section {
 	font-size: 1.1em;
 	line-height: 1.6;
 	color: #2d2013;
@@ -95,18 +94,18 @@
 	white-space: pre-line;
 	padding: 20px;
 	overflow-y: auto;
-  }
-  
-  .desktop .image-section img {
+}
+
+.desktop .image-section img {
 	max-width: 100%;
 	max-height: 100%;
 	object-fit: contain;
 	border: 2px solid #bca77a;
 	box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-  }
-  
-  /* Cover Page Styles for Desktop */
-  .desktop .page.cover {
+}
+
+/* Cover Page Styles for Desktop */
+.desktop .page.cover {
 	background: url('leather-texture.jpg') #3e2a14;
 	background-size: cover;
 	box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8);
@@ -115,40 +114,40 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-  }
-  
-  .desktop .page.cover h1 {
+}
+
+.desktop .page.cover h1 {
 	font-size: 3em;
 	margin-bottom: 2vh;
 	text-transform: uppercase;
 	border-bottom: 2px solid #d1ba8b;
 	display: inline-block;
 	padding-bottom: 1vh;
-  }
-  
-  .desktop .page.cover h3 {
+}
+
+.desktop .page.cover h3 {
 	font-size: 1.5em;
 	font-style: italic;
-  }
-  
-  /* Intro Page Styles for Desktop */
-  .desktop .page.intro .text-section {
+}
+
+/* Intro Page Styles for Desktop */
+.desktop .page.intro .text-section {
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 90%;
-  }
-  
-  
-  /* MOBILE STYLES */
-  .mobile {
-	height: calc(100vh - var(--backlink-height)); /* Ensure mobile layout takes up remaining height */
+}
+
+
+/* MOBILE STYLES */
+.mobile {
+	height: calc(100vh - 50px); /* Ensure mobile layout takes up remaining height, adjusted for fixed backlink */
 	display: flex; /* Make it a flex container */
 	flex-direction: column; /* Stack children vertically */
-  }
-  
-  .mobile .book {
+}
+
+.mobile .book {
 	width: 100vw;
 	height: 100%; /* Book takes up remaining height of the layout */
 	background: url('leather-texture.jpg') #3e2a14;
@@ -158,9 +157,9 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
-  }
-  
-  .mobile .page {
+}
+
+.mobile .page {
 	display: none;
 	width: 100vw;
 	height: 100%; /* Page takes full height of the book */
@@ -173,30 +172,30 @@
 	justify-content: flex-start;
 	box-sizing: border-box; /* Include padding in height */
 	padding-bottom: var(--nav-buttons-height); /* Add padding to account for nav buttons */
-  }
-  
-  .mobile .page.visible {
+}
+
+.mobile .page.visible {
 	display: flex;
-  }
-  
-  .mobile .image-section {
+}
+
+.mobile .image-section {
 	height: 60%; /* Take 60% of the available page height */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 1vh 2vw; /* Add some padding */
 	box-sizing: border-box;
-  }
-  
-  .mobile .image-section img {
+}
+
+.mobile .image-section img {
 	max-height: 100%;
 	max-width: 100%;
 	object-fit: contain;
 	border: 1px solid #bca77a;
 	box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-  }
-  
-  .mobile .text-section {
+}
+
+.mobile .text-section {
 	height: 40%; /* Take 40% of the available page height */
 	padding: 1vh 4vw;
 	font-size: 4vw;
@@ -205,10 +204,10 @@
 	text-align: center;
 	overflow-y: auto;
 	box-sizing: border-box;
-  }
-  
-  /* Cover Page Styles for Mobile */
-  .mobile .page.cover {
+}
+
+/* Cover Page Styles for Mobile */
+.mobile .page.cover {
 	background: url('leather-texture.jpg') #3e2a14;
 	background-size: cover;
 	box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8);
@@ -216,20 +215,20 @@
 	text-align: center;
 	justify-content: center;
 	align-items: center;
-  }
-  
-  @media (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
 	.mobile .page.cover h1 {
 	  font-size: 6vw;
 	  margin-bottom: 1.5vh;
 	}
-  
+
 	.mobile .page.cover h3 {
 	  font-size: 3vw;
 	}
-  }
-  
-  .mobile .page.cover h1 {
+}
+
+.mobile .page.cover h1 {
 	font-size: 8vw;
 	margin-bottom: 2vh;
 	text-transform: uppercase;
@@ -237,23 +236,23 @@
 	display: inline-block;
 	padding-bottom: 1vh;
 	font-family: sans-serif;
-  }
-  
-  .mobile .page.cover h3 {
+}
+
+.mobile .page.cover h3 {
 	font-size: 4.5vw;
 	font-style: italic;
-  }
-  
-  /* Intro Page Styles for Mobile */
-  .mobile .page.intro .text-section {
+}
+
+/* Intro Page Styles for Mobile */
+.mobile .page.intro .text-section {
 	height: 50%; /* Adjust intro page text section height */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 0 4vw;
-  }
-  
-  .back-to-cover-button {
+}
+
+.back-to-cover-button {
 	padding: 1.5vh 3vw;
 	font-size: 2.5vw;
 	background-color: #3e2a14;
@@ -263,56 +262,15 @@
 	font-family: 'Canterbury', cursive;
 	border-radius: 8px;
 	margin-top: 20px;
-  }
-  
-  .nav-buttons {
-	  display: flex;
-	  justify-content: space-around;
-	  align-items: center;
-  }
-  
-  .nav-buttons #nextButton,
-  .nav-buttons #backToCoverButton {
-	  display: none;
-  }
-  
-  /* Backlink Blog Styles (Moved and Modified for Header) */
-  #backlink-blog {
-	--color-accent: #3e2a14; /* Matches hover color of buttons */
-	width: 100%;
-	border-bottom: 1px dashed #3e2a14; /* Matches border color */
-	background-color: #5c3a1e; /* Matches button background */
-	padding: 8px;
-	text-align: center; /* Center the text */
-	color: white; /* Text color */
-	font-size: 0.8rem;
-	font-weight: bold;
-	font-family: 'Canterbury', cursive;
-	box-sizing: border-box; /* Include padding and border in the width */
-	height: var(--backlink-height); /* Set a fixed height */
+}
+
+.nav-buttons {
 	display: flex;
+	justify-content: space-around;
 	align-items: center;
-	justify-content: center;
-	/* Removed transform and box-shadow for a cleaner header look */
-	/* Removed position: absolute and z-index as it's now part of flow */
-  }
-  #backlink-blog:hover {
-	  transform: none; /* Remove hover transform */
-  }
-  #backlink-blog a {
-	  text-decoration: none;
-	  color: inherit;
-	  background-image: linear-gradient(to right,
-						var(--color-accent) 0%,
-						var(--color-accent) 100%);
-	  background-size: 0% 100%;
-	  background-position: left center;
-	  background-repeat: no-repeat;
-	  transition: background-size 0.2s ease-in-out;
-	  padding: 0.5rem;
-	  display: inline-block;
-  }
-  #backlink-blog a:hover {
-	  background-size: 100% 100%;
-	  color: white;
-  }
+}
+
+.nav-buttons #nextButton,
+.nav-buttons #backToCoverButton {
+	display: none;
+}
