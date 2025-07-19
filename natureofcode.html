@@ -4,27 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Nature of Code Feedback</title>
-    <style>
+    <meta name="theme-color" content="#415295"> <style>
         /* No specific Google Font import needed for generic sans-serif */
 
+        :root {
+            --color-accent: #28325c; /* Original accent for natureofcode */
+        }
+
+        /* Backlink styles identical to conclusion.html template, preserving original colors and font */
         #backlink-recipe {
-            --color-accent: #28325c;
             width: 100%;
-            background-color: #415295;
+            background-color: #415295; /* Original background color for backlink */
             padding: 10px 0;
             color: white;
             font-size: 1rem;
             font-weight: bold;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-            border-radius: 0;
             box-sizing: border-box;
-            font-family: sans-serif;
-            position: relative;
-            top: auto;
-            right: auto;
+            font-family: sans-serif; /* Original font family for backlink */
+            position: fixed; /* Changed to fixed */
+            top: 0; /* Pinned to top */
+            left: 0; /* Pinned to left */
             transform: none;
+            z-index: 1000; /* Ensure it's on top */
         }
         #backlink-recipe a {
             text-decoration: none;
@@ -32,29 +35,29 @@
             display: inline-block;
             padding: 0 15px;
             transition: background-color 0.3s ease;
-            font-size: 1rem; /* Base font size for the link itself */
+            font-size: 1rem;
         }
         #backlink-recipe a:hover {
-            background-color: var(--color-accent);
+            background-color: var(--color-accent); /* Original accent color for hover */
             color: white;
         }
 
         /* Specific styles for this feedback page */
         body {
-            font-family: sans-serif;
-            background-color: #93b4bf; /* Background color from nature-of-code in index.html */
-            color: #164068; /* Default text color, matching p */
+            font-family: sans-serif; /* Original font for body */
+            background-color: #93b4bf; /* Original background color */
+            color: #164068; /* Original body text color */
             margin: 0;
-            padding: 0;
+            padding: 50px 0 0 0; /* Added padding-top to account for fixed backlink */
         }
 
         h1, h2 {
-            color: #0c253d; /* H1 and H2 color from nature-of-code in index.html */
+            color: #0c253d; /* Original H1 and H2 color */
         }
 
         p {
-            color: #164068; /* Paragraph text color from nature-of-code in index.html */
-            line-height: 1.6; /* Default line height for better readability */
+            color: #164068; /* Original paragraph text color */
+            line-height: 1.6;
         }
 
         .content {
@@ -63,29 +66,28 @@
             margin: 0 auto;
         }
 
-        /* Removed Mobile responsiveness font size adjustments to match other files */
-        /*
-        @media screen and (max-width: 600px) {
+        @media (max-width: 768px) {
             #backlink-recipe {
-                font-size: 1.8rem;
+                font-size: 1.1rem; /* Consistent with conclusion.html */
+                padding: 12px 0; /* Consistent with conclusion.html */
             }
-            #backlink-recipe a {
-                font-size: 1.8rem;
-            }
+
             h1 {
-                font-size: 8vw;
-                word-wrap: break-word;
+                font-size: 1.5rem; /* Consistent with conclusion.html */
             }
+
             h2 {
-                font-size: 6vw;
-                word-wrap: break-word;
+                font-size: 1.3rem; /* Consistent with conclusion.html */
             }
+
             p {
-                font-size: 1.4rem;
-                line-height: 1.8;
+                font-size: 1rem; /* Consistent with conclusion.html */
+                line-height: 1.6; /* Consistent with conclusion.html */
+            }
+            body {
+                padding-top: 60px; /* Adjust padding for smaller screens */
             }
         }
-        */
     </style>
 </head>
 <body>

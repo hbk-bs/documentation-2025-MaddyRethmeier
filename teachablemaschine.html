@@ -4,27 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Teachable Machine Feedback</title>
-    <style>
+    <meta name="theme-color" content="#4CAF50"> <style>
         @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
 
+        :root {
+            --color-accent: #45a049; /* Original accent for teachablemaschine */
+        }
+
+        /* Backlink styles identical to conclusion.html template, preserving original colors and font */
         #backlink-calculator {
-            --color-accent: #45a049;
             width: 100%;
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Original background color for backlink */
             padding: 10px 0;
             color: white;
             font-size: 1rem;
             font-weight: bold;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-            border-radius: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            position: relative;
-            top: auto;
-            right: auto;
+            font-family: Arial, sans-serif; /* Original font family for backlink */
+            position: fixed; /* Changed to fixed */
+            top: 0; /* Pinned to top */
+            left: 0; /* Pinned to left */
             transform: none;
+            z-index: 1000; /* Ensure it's on top */
         }
         #backlink-calculator a {
             text-decoration: none;
@@ -34,31 +37,54 @@
             transition: background-color 0.3s ease;
         }
         #backlink-calculator a:hover {
-            background-color: var(--color-accent);
+            background-color: var(--color-accent); /* Original accent color for hover */
             color: white;
         }
 
         /* Specific styles for this feedback page */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #e4f8fc; /* Background color from teachable-machine in index.html */
-            color: #555; /* Default text color, matching p */
+            font-family: Arial, sans-serif; /* Original font for body */
+            background-color: #e4f8fc; /* Original background color */
+            color: #555; /* Original body text color */
             margin: 0;
-            padding: 0;
+            padding: 50px 0 0 0; /* Added padding-top to account for fixed backlink */
         }
 
         h1, h2 {
-            color: #2e8b57; /* H1 and H2 color from teachable-machine in index.html */
+            color: #2e8b57; /* Original H1 and H2 color */
         }
 
         p {
-            color: #555; /* Paragraph text color from teachable-machine in index.html */
+            color: #555; /* Original paragraph text color */
         }
 
         .content {
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            #backlink-calculator {
+                font-size: 1.1rem; /* Consistent with conclusion.html */
+                padding: 12px 0; /* Consistent with conclusion.html */
+            }
+
+            h1 {
+                font-size: 1.5rem; /* Consistent with conclusion.html */
+            }
+
+            h2 {
+                font-size: 1.3rem; /* Consistent with conclusion.html */
+            }
+
+            p {
+                font-size: 1rem; /* Consistent with conclusion.html */
+                line-height: 1.6; /* Consistent with conclusion.html */
+            }
+            body {
+                padding-top: 60px; /* Adjust padding for smaller screens */
+            }
         }
     </style>
 </head>

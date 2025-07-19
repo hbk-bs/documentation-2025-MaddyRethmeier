@@ -4,38 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AGI-Debate Club Feedback</title>
-    <style>
+    <meta name="theme-color" content="#6878f2"> <style>
         @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap');
 
         :root {
-            --color-accent: #4954a5;
+            --color-accent: #4954a5; /* Original accent for agi */
         }
 
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: #bae2ff;
-            color: #311f72;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Original font for body */
+            background-color: #bae2ff; /* Original background color */
+            color: #311f72; /* Original body text color */
             margin: 0;
-            padding: 0;
+            padding: 50px 0 0 0; /* Added padding-top to account for fixed backlink */
         }
 
+        /* Backlink styles identical to conclusion.html template, preserving original colors and font */
         #backlink-weather {
-            width: 100%; /* Consistent width */
-            background-color: #6878f2;
-            padding: 10px 0; /* Consistent padding */
+            width: 100%;
+            background-color: #6878f2; /* Original background color for backlink */
+            padding: 10px 0;
             color: white;
             font-size: 1rem;
             font-weight: bold;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px; /* Consistent margin */
-            border-radius: 0; /* Consistent border-radius */
-            box-sizing: border-box; /* Consistent box-sizing */
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            position: relative; /* Consistent positioning */
-            top: auto; /* Consistent positioning */
-            right: auto; /* Consistent positioning */
-            transform: none; /* Consistent positioning */
+            box-sizing: border-box;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Original font family for backlink */
+            position: fixed; /* Changed to fixed */
+            top: 0; /* Pinned to top */
+            left: 0; /* Pinned to left */
+            transform: none;
+            z-index: 1000; /* Ensure it's on top */
         }
 
         #backlink-weather a {
@@ -47,16 +47,16 @@
         }
 
         #backlink-weather a:hover {
-            background-color: var(--color-accent);
+            background-color: var(--color-accent); /* Original accent color for hover */
             color: white;
         }
 
         h1, h2 {
-            color: #28195f;
+            color: #28195f; /* Original H1 and H2 color */
         }
 
         p {
-            color: #311f72;
+            color: #311f72; /* Original paragraph text color */
         }
 
         .content {
@@ -67,21 +67,24 @@
 
         @media (max-width: 768px) {
             #backlink-weather {
-                font-size: 1.1rem;
-                padding: 12px 0;
+                font-size: 1.1rem; /* Consistent with conclusion.html */
+                padding: 12px 0; /* Consistent with conclusion.html */
             }
 
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.5rem; /* Consistent with conclusion.html */
             }
 
             h2 {
-                font-size: 1.3rem;
+                font-size: 1.3rem; /* Consistent with conclusion.html */
             }
 
             p {
-                font-size: 1rem;
-                line-height: 1.6;
+                font-size: 1rem; /* Consistent with conclusion.html */
+                line-height: 1.6; /* Consistent with conclusion.html */
+            }
+            body {
+                padding-top: 60px; /* Adjust padding for smaller screens */
             }
         }
     </style>

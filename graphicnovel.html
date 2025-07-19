@@ -4,38 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>A Generative Novel Feedback</title>
-  <style>
-    /* Removed broken Google Font import for Canterbury */
+  <meta name="theme-color" content="#5c3a1e"> <style>
+    /* No specific Google Font import needed for generic cursive */
 
     :root {
-      --color-accent: #3e2a14;
+      --color-accent: #3e2a14; /* Original accent for graphicnovel */
     }
 
     body {
-      font-family: cursive, "Brush Script MT", "Lucida Handwriting", sans-serif;
-      background-color: #f6f1d3;
-      color: #3e2a14;
+      font-family: cursive, "Brush Script MT", "Lucida Handwriting", sans-serif; /* Original font for body */
+      background-color: #f6f1d3; /* Original background color */
+      color: #3e2a14; /* Original body text color */
       margin: 0;
-      padding: 0;
+      padding: 50px 0 0 0; /* Added padding-top to account for fixed backlink */
     }
 
+    /* Backlink styles identical to conclusion.html template, preserving original colors and font */
     #backlink-blog {
-      width: 100%; /* Consistent width */
-      background-color: #5c3a1e;
-      padding: 10px 0; /* Consistent padding */
+      width: 100%;
+      background-color: #5c3a1e; /* Original background color for backlink */
+      padding: 10px 0;
       color: white;
       font-size: 1rem;
       font-weight: bold;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      margin-bottom: 20px; /* Consistent margin */
-      border-radius: 0; /* Consistent border-radius */
-      box-sizing: border-box; /* Consistent box-sizing */
-      font-family: inherit;
-      position: relative; /* Consistent positioning */
-      top: auto; /* Consistent positioning */
-      right: auto; /* Consistent positioning */
-      transform: none; /* Consistent positioning */
+      box-sizing: border-box;
+      font-family: inherit; /* Original font family for backlink */
+      position: fixed; /* Changed to fixed */
+      top: 0; /* Pinned to top */
+      left: 0; /* Pinned to left */
+      transform: none;
+      z-index: 1000; /* Ensure it's on top */
     }
 
     #backlink-blog a {
@@ -47,16 +47,16 @@
     }
 
     #backlink-blog a:hover {
-      background-color: var(--color-accent);
+      background-color: var(--color-accent); /* Original accent color for hover */
       color: white;
     }
 
     h1, h2 {
-      color: #382818;
+      color: #382818; /* Original H1 and H2 color */
     }
 
     p {
-      color: #3e2a14;
+      color: #3e2a14; /* Original paragraph text color */
     }
 
     .content {
@@ -67,21 +67,24 @@
 
     @media (max-width: 768px) {
       #backlink-blog {
-        font-size: 1.1rem;
-        padding: 12px 0;
+        font-size: 1.1rem; /* Consistent with conclusion.html */
+        padding: 12px 0; /* Consistent with conclusion.html */
       }
 
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Consistent with conclusion.html */
       }
 
       h2 {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Consistent with conclusion.html */
       }
 
       p {
-        font-size: 1rem;
-        line-height: 1.6;
+        font-size: 1rem; /* Consistent with conclusion.html */
+        line-height: 1.6; /* Consistent with conclusion.html */
+      }
+      body {
+          padding-top: 60px; /* Adjust padding for smaller screens */
       }
     }
   </style>
