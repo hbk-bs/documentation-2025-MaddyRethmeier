@@ -95,8 +95,15 @@
 
     <div class="content">
         <h1>Teachable Machine Feedback</h1>
-        <h2>Project Overview</h2>
-        <p>This section details my thoughts and learnings from the "Teachable Machine" project.</p>
+        <h2>Objective</h2>
+        <p>The main goal of this project was to create a web application using Teachable Machine. I wanted to learn how to train an AI model and use it to build something original. To this end, my idea was to create a "cuddle preference" predictor for animals, classifying them as: +1 (cuddle), 0 (okay), or -1 (no cuddle). These classifications were based entirely on my subjective opinion, ignoring real-life danger. The app featured two game modes: a pre-set quiz and a user-upload feature.</p>
+        <h2>Process</h2>
+        <p>I trained the AI model with about 150 images for each of the three categories. I made sure the image dataset was diverse, including everything from pets to wild animals and insects. During development, similarly, I created two operational modes for the game. The first was a pre-set quiz that randomly selected 20 images from a pool of 50. The second mode, in contrast, allowed players to upload their own images for the AI to classify. Both modes gave a "friendship compatibility" score, showing how well the player's preferences matched those I trained the AI with.</p>
+        <h2>Challenges</h2>
+        <p>The project faced a few key challenges. Firstly, there was a licensing issue with the original image dataset, which meant I had to replace all the images. This forced me to restructure the code and use an array to manage the quiz images, which in the end made the code cleaner. Secondly, and more time-consuming, was implementing the user-upload feature. It took much longer than I expected, and I learned that sometimes it is more efficient to manually write code for specific layout and design changes rather than trying to get an AI to do it with prompts.</p>
+        <h2>Conclusion</h2>
+        <p>The "To Cuddle or Not to Cuddle" project was a successful way to apply a subjective AI model in a working web application. Furthermore, it taught me important lessons about development. The unexpected image licensing issue pushed me to create a more organised and elegant codebase. Developing the second game mode, in particular, showed me the value of a hybrid approach: using AI for core tasks like model training, but relying on manual coding for specific design details. This combination led to a more robust and well-structured final product. Additionally, the integration of the two game modes also forced me to make the code more modular and adaptable, which was a great learning experience.</p>
     </div>
+    
 </body>
 </html>

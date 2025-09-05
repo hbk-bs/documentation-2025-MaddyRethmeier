@@ -92,11 +92,17 @@
     <div id="backlink-todo">
         <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#text-universal-interface-panel">Back to Documentation</a>
     </div>
-
+    
     <div class="content">
         <h1>Text the Universal Interface Feedback</h1>
-        <h2>Project Overview</h2>
-        <p>This section details my thoughts and learnings from the "Text the Universal Interface" project.</p>
+        <h2>Objective</h2>
+        <p>The primary objective of this project was to develop a chatbot with a specific behavioural constraint: to respond exclusively in the style of an AO3 (Archive of Our Own) fanfiction story description. The chatbot's output was designed to mimic the website’s layout and features, including a relevant title, genre, a variety of tags, a word count, a story summary, and direct links to tag-filtered searches on the AO3 website. The user's query would therefore serve as the prompt for the chatbot to generate a summary for an imaginary fanfiction story.</p>
+        <h2>Process</h2>
+        <p>The development process was centred on replicating the visual and structural conventions of an AO3 fanfiction page. This involved implementing a series of features to enhance the user experience and to maintain the aesthetic. The final output presents all fanfiction elements—title, genre, tags, and summary—in a single vertical list. While this layout deviates from AO3's typical horizontal design, it nevertheless ensures the content is clear and readable on various devices. The chatbot’s responses were also designed to match the language of the user's initial prompt. Additionally, features included integrated ad banners for desktop display and a button that allows the user to save the generated output as an HTML file.</p>
+        <h2>Challenges and Solutions</h2>
+        <p>The most significant challenge was maintaining the chatbot's behavioural consistency. I had to develop a robust prompt that would prevent the chatbot from breaking its stylistic constraints, even when faced with user attempts to disrupt its designed output. This was resolved by implementing explicit guardrails into the prompt itself. A separate, and arguably greater, challenge was the initial difficulty in determining the appropriate level of specificity for the chatbot's prompts. This was streamlined through an iterative process of prompt engineering, where I used another AI to collaboratively refine the initial prompt.</p>
+        <h2>Conclusion</h2>
+        <p>This project served as a valuable exercise in designing a highly constrained AI. It demonstrated that successful outcomes depend not only on the core functionality but also on the precision of the prompt and the robustness of the system's behavioural rules. The experience highlighted the importance of prompt engineering as a critical skill, showing that a well-crafted prompt can significantly improve an AI's performance and efficiency. Furthermore, the project underscored the need to anticipate and mitigate user attempts to "break" the system, ensuring that the chatbot's unique persona remains consistent and intact. This creative constraint ultimately led to a more polished and reliable final product.</p>
     </div>
 </body>
 </html>
