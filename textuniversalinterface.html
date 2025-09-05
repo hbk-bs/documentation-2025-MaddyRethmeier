@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Text the Universal Interface Feedback</title>
+    <meta name="theme-color" content="#800000"> <style>
+        @import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+
+        :root {
+            --color-accent: #660000; /* Original accent for textuniversalinterface */
+        }
+
+        /* Backlink styles identical to conclusion.html template, preserving original colors and font */
+        #backlink-todo {
+            width: 100%;
+            background-color: #800000; /* Original background color for backlink */
+            padding: 10px 0;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Original font family for backlink */
+            position: fixed; /* Changed to fixed */
+            top: 0; /* Pinned to top */
+            left: 0; /* Pinned to left */
+            transform: none;
+            z-index: 1000; /* Ensure it's on top */
+        }
+        #backlink-todo a {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            padding: 0 15px;
+            transition: background-color 0.3s ease;
+        }
+        #backlink-todo a:hover {
+            background-color: var(--color-accent); /* Original accent color for hover */
+            color: white;
+        }
+
+        /* Specific styles for this feedback page */
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Original font for body */
+            background-color: #f0f0f0; /* Original background color */
+            color: #990000; /* Original body text color */
+            margin: 0;
+            padding: 50px 0 0 0; /* Added padding-top to account for fixed backlink */
+        }
+
+        h1, h2 {
+            color: #660000; /* Original H1 and H2 color */
+        }
+
+        p {
+            color: #990000; /* Original paragraph text color */
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            #backlink-todo {
+                font-size: 1.1rem; /* Consistent with conclusion.html */
+                padding: 12px 0; /* Consistent with conclusion.html */
+            }
+
+            h1 {
+                font-size: 1.5rem; /* Consistent with conclusion.html */
+            }
+
+            h2 {
+                font-size: 1.3rem; /* Consistent with conclusion.html */
+            }
+
+            p {
+                font-size: 1rem; /* Consistent with conclusion.html */
+                line-height: 1.6; /* Consistent with conclusion.html */
+            }
+            body {
+                padding-top: 60px; /* Adjust padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="backlink-todo">
+        <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#text-universal-interface-panel">Back to Documentation</a>
+    </div>
+    
+    <div class="content">
+        <h1>Text the Universal Interface Feedback</h1>
+        <h2>Objective</h2>
+        <p>The primary objective of this project was to develop a chatbot with a specific behavioural constraint: to respond exclusively in the style of an AO3 (Archive of Our Own) fanfiction story description. The chatbot's output was designed to mimic the website’s layout and features, including a relevant title, genre, a variety of tags, a word count, a story summary, and direct links to tag-filtered searches on the AO3 website. The user's query would therefore serve as the prompt for the chatbot to generate a summary for an imaginary fanfiction story.</p>
+        <h2>Process</h2>
+        <p>The development process was centred on replicating the visual and structural conventions of an AO3 fanfiction page. This involved implementing a series of features to enhance the user experience and to maintain the aesthetic. The final output presents all fanfiction elements—title, genre, tags, and summary—in a single vertical list. While this layout deviates from AO3's typical horizontal design, it nevertheless ensures the content is clear and readable on various devices. The chatbot’s responses were also designed to match the language of the user's initial prompt. Additionally, features included integrated ad banners for desktop display and a button that allows the user to save the generated output as an HTML file.</p>
+        <h2>Challenges and Solutions</h2>
+        <p>The most significant challenge was maintaining the chatbot's behavioural consistency. I had to develop a robust prompt that would prevent the chatbot from breaking its stylistic constraints, even when faced with user attempts to disrupt its designed output. This was resolved by implementing explicit guardrails into the prompt itself. A separate, and arguably greater, challenge was the initial difficulty in determining the appropriate level of specificity for the chatbot's prompts. This was streamlined through an iterative process of prompt engineering, where I used another AI to collaboratively refine the initial prompt.</p>
+        <h2>Conclusion</h2>
+        <p>This project served as a valuable exercise in designing a highly constrained AI. It demonstrated that successful outcomes depend not only on the core functionality but also on the precision of the prompt and the robustness of the system's behavioural rules. The experience highlighted the importance of prompt engineering as a critical skill, showing that a well-crafted prompt can significantly improve an AI's performance and efficiency. Furthermore, the project underscored the need to anticipate and mitigate user attempts to "break" the system, ensuring that the chatbot's unique persona remains consistent and intact. This creative constraint ultimately led to a more polished and reliable final product.</p>
+    </div>
+</body>
+</html>

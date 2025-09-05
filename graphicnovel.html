@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Generative Novel Feedback</title>
+  <meta name="theme-color" content="#5c3a1e"> <style>
+    /* No specific Google Font import needed for generic cursive */
+
+    :root {
+      --color-accent: #3e2a14; /* Original accent for graphicnovel */
+    }
+
+    body {
+      font-family: cursive, "Brush Script MT", "Lucida Handwriting", sans-serif; /* Original font for body */
+      background-color: #f6f1d3; /* Original background color */
+      color: #3e2a14; /* Original body text color */
+      margin: 0;
+      padding: 50px 0 0 0; /* Added padding-top to account for fixed backlink */
+    }
+
+    /* Backlink styles identical to conclusion.html template, preserving original colors and font */
+    #backlink-blog {
+      width: 100%;
+      background-color: #5c3a1e; /* Original background color for backlink */
+      padding: 10px 0;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      font-family: inherit; /* Original font family for backlink */
+      position: fixed; /* Changed to fixed */
+      top: 0; /* Pinned to top */
+      left: 0; /* Pinned to left */
+      transform: none;
+      z-index: 1000; /* Ensure it's on top */
+    }
+
+    #backlink-blog a {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+      padding: 0 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    #backlink-blog a:hover {
+      background-color: var(--color-accent); /* Original accent color for hover */
+      color: white;
+    }
+
+    h1, h2 {
+      color: #382818; /* Original H1 and H2 color */
+    }
+
+    p {
+      color: #3e2a14; /* Original paragraph text color */
+    }
+
+    .content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      #backlink-blog {
+        font-size: 1.1rem; /* Consistent with conclusion.html */
+        padding: 12px 0; /* Consistent with conclusion.html */
+      }
+
+      h1 {
+        font-size: 1.5rem; /* Consistent with conclusion.html */
+      }
+
+      h2 {
+        font-size: 1.3rem; /* Consistent with conclusion.html */
+      }
+
+      p {
+        font-size: 1rem; /* Consistent with conclusion.html */
+        line-height: 1.6; /* Consistent with conclusion.html */
+      }
+      body {
+          padding-top: 60px; /* Adjust padding for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="backlink-blog">
+    <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#generative-novel-panel">
+      Back to Documentation
+    </a>
+  </div>
+
+  <div class="content">
+    <h1>A Generative Novel Feedback</h1>
+    <h2>Objective</h2>
+    <p>This project was undertaken with the objective of creating a generative novel, combining both AI-driven content generation and human-led creative direction. We chose to create the story of the Lion Statue from Braunschweig's Burgplatz as it comes to life and explores the modern city. The narrative was designed as a 21-stanza poem, with four verses per stanza, each corresponding to a unique visual illustration.</p>
+    <h2>Process</h2>
+    <p>Our process began with outlining the story's key narrative focal points, including the protagonist's journey, central theme, and conclusion. These were provided to an AI model, which generated a foundational poem. This draft was then collaboratively refined through manual adjustments to align it with our creative vision. For the visual component, we used an image-generation model to create illustrations that combined the aesthetic of Persian miniature paintings with Japanese woodblock prints. This resulted in a unique style dominated by deep blue tones and intricate golden ornaments. AI models were instrumental in creating the effective prompts used for the image-generation process, with the final illustrations intended to reflect the Lion Statue's changing experiences.</p>
+    <h2>Problems</h2>
+    <p>The project presented several challenges, primarily related to web development and the constraints of AI-generated content. Our initial design goal was to create a website that mimicked an ancient tome with a realistic page-turning animation. However, due to technical limitations, we simplified this concept. A key creative challenge was the lack of character consistency in the AI-generated images. The lion and its ornaments changed subtly from picture to picture, which detracted from the visual consistency of the main character. We also consciously chose not to include written text in the illustrations, recognising that AI models still struggle with accurate text placement and spelling.</p>
+    <h2>Solution</h2>
+    <p>To overcome the development constraints, we adapted our original design, creating a more simplified yet still aesthetically pleasing website. The final layout effectively presents the narrative on both desktop and mobile devices, with a clear separation of images and text. For example, on desktop, images are displayed on the left and text on the right, while on mobile, images occupy the top two-thirds of the screen with the text below. A key technical solution was linking the images and text dynamically, ensuring that reordering the poem's stanzas would automatically update the corresponding image order. While the issue of character consistency in the images could not be fully resolved, our focus on a consistent visual style over perfect character replication allowed the project to move forward.</p>
+    <h2>Conclusion</h2>
+    <p>This project served as a significant learning experience, highlighting both the power and the limitations of AI in a creative collaboration. The experience taught us how to effectively use AI as a tool for generating creative content and how to adapt original design goals to fit practical development constraints. Moreover, it reinforced the importance of focusing on core project goals, such as the overall presentation of the story, especially when working with models that may have their own limitations. The final product, therefore, successfully merges a generative narrative with a unique visual style, demonstrating the potential of a hybrid creative process.</p>
+</div>
+</body>
+</html>
