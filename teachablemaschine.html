@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Teachable Machine Feedback</title>
-    <meta name="theme-color" content="#4CAF50"> <style>
+    <meta name="theme-color" content="#4CAF50">
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
 
         :root {
@@ -12,7 +13,7 @@
         }
 
         /* Backlink styles identical to conclusion.html template, preserving original colors and font */
-        #backlink-calculator {
+        #backlink-cuddle {
             width: 100%;
             background-color: #4CAF50; /* Original background color for backlink */
             padding: 10px 0;
@@ -29,14 +30,14 @@
             transform: none;
             z-index: 1000; /* Ensure it's on top */
         }
-        #backlink-calculator a {
+        #backlink-cuddle a {
             text-decoration: none;
             color: inherit;
             display: inline-block;
             padding: 0 15px;
             transition: background-color 0.3s ease;
         }
-        #backlink-calculator a:hover {
+        #backlink-cuddle a:hover {
             background-color: var(--color-accent); /* Original accent color for hover */
             color: white;
         }
@@ -65,7 +66,7 @@
         }
         
         @media (max-width: 768px) {
-            #backlink-calculator {
+            #backlink-cuddle {
                 font-size: 1.1rem; /* Consistent with conclusion.html */
                 padding: 12px 0; /* Consistent with conclusion.html */
             }
@@ -86,10 +87,35 @@
                 padding-top: 60px; /* Adjust padding for smaller screens */
             }
         }
+        
+        /* Styles for the button at the bottom */
+        .github-button {
+            display: inline-block; /* Make it a button, not a banner */
+            text-decoration: none;
+            color: white; /* Match text color of the banner */
+            background-color: #4CAF50; /* Updated to match the banner's background color */
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            font-family: Arial, sans-serif; /* Updated to match the banner's font */
+            transition: all 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .github-button:hover {
+            background-color: var(--color-accent); /* Same hover effect as the banner */
+            color: white;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <div id="backlink-calculator">
+    <div id="backlink-cuddle">
         <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#teachable-machine-panel">Back to Documentation</a>
     </div>
 
@@ -103,6 +129,12 @@
         <p>The project faced a few key challenges. Firstly, there was a licensing issue with the original image dataset, which meant I had to replace all the images. This forced me to restructure the code and use an array to manage the quiz images, which in the end made the code cleaner. Secondly, and more time-consuming, was implementing the user-upload feature. It took much longer than I expected, and I learned that sometimes it is more efficient to manually write code for specific layout and design changes rather than trying to get an AI to do it with prompts.</p>
         <h2>Conclusion</h2>
         <p>The "To Cuddle or Not to Cuddle" project was a successful way to apply a subjective AI model in a working web application. Furthermore, it taught me important lessons about development. The unexpected image licensing issue pushed me to create a more organised and elegant codebase. Developing the second game mode, in particular, showed me the value of a hybrid approach: using AI for core tasks like model training, but relying on manual coding for specific design details. This combination led to a more robust and well-structured final product. Additionally, the integration of the two game modes also forced me to make the code more modular and adaptable, which was a great learning experience.</p>
+    
+        <div class="button-container">
+            <a href="https://github.com/hbk-bs/teachable-machine-MaddyRethmeier" class="github-button">
+                View the GitHub Repository
+            </a>
+        </div>
     </div>
     
 </body>

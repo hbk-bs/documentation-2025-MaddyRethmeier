@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AGI-Debate Club Feedback</title>
-    <meta name="theme-color" content="#6878f2"> <style>
+    <meta name="theme-color" content="#6878f2">
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap');
 
         :root {
@@ -20,7 +21,7 @@
         }
 
         /* Backlink styles identical to conclusion.html template, preserving original colors and font */
-        #backlink-weather {
+        #backlink-agi {
             width: 100%;
             background-color: #6878f2; /* Original background color for backlink */
             padding: 10px 0;
@@ -38,7 +39,7 @@
             z-index: 1000; /* Ensure it's on top */
         }
 
-        #backlink-weather a {
+        #backlink-agi a {
             text-decoration: none;
             color: inherit;
             display: inline-block;
@@ -46,7 +47,7 @@
             transition: background-color 0.3s ease;
         }
 
-        #backlink-weather a:hover {
+        #backlink-agi a:hover {
             background-color: var(--color-accent); /* Original accent color for hover */
             color: white;
         }
@@ -66,7 +67,7 @@
         }
 
         @media (max-width: 768px) {
-            #backlink-weather {
+            #backlink-agi {
                 font-size: 1.1rem; /* Consistent with conclusion.html */
                 padding: 12px 0; /* Consistent with conclusion.html */
             }
@@ -87,10 +88,35 @@
                 padding-top: 60px; /* Adjust padding for smaller screens */
             }
         }
+        
+        /* Styles for the button at the bottom */
+        .github-button {
+            display: inline-block; /* Make it a button, not a banner */
+            text-decoration: none;
+            color: white; /* Match text color of the banner */
+            background-color: #6878f2; /* Match background color of the banner */
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Adjusted to match banner font */
+            transition: all 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .github-button:hover {
+            background-color: var(--color-accent, #4954a5); /* Same hover effect as the banner */
+            color: white;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <div id="backlink-weather">
+    <div id="backlink-agi">
         <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#agi-debate-panel">
             Back to Documentation
         </a>
@@ -108,6 +134,12 @@
         <p>Our solution was a proactive, precautionary approach. We argued that it is much easier to prevent a disaster than to deal with the aftermath. Consequently, instead of waiting for AGI to become a critical threat, we should be creating strong ethical frameworks, regulations, and safety protocols right now. We believe we should learn from the problems we are already seeing with current AI and use that knowledge to guide AGI development, rather than assuming we can just fix everything later.</p>
         <h2>Conclusion</h2>
         <p>In the end, the debate did not have a clear winner, which really proves how complex this topic is. The fact that there was not a definitive conclusion shows that the conversation about AGI's future is far from over. This project was an excellent exercise in critical thinking, showing that the arguments against AGI are not just about technology but also about deep ethical, social and existential concerns that need to be discussed openly and continuously.</p>
+    
+        <div class="button-container">
+            <a href="AGI.pdf" class="github-button">
+                View the Presentation
+            </a>
+        </div>
     </div>
 </body>
 </html>

@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>A Generative Novel Feedback</title>
-  <meta name="theme-color" content="#5c3a1e"> <style>
+  <meta name="theme-color" content="#5c3a1e">
+  <style>
     /* No specific Google Font import needed for generic cursive */
 
     :root {
@@ -20,7 +21,7 @@
     }
 
     /* Backlink styles identical to conclusion.html template, preserving original colors and font */
-    #backlink-blog {
+    #backlink-novel {
       width: 100%;
       background-color: #5c3a1e; /* Original background color for backlink */
       padding: 10px 0;
@@ -38,7 +39,7 @@
       z-index: 1000; /* Ensure it's on top */
     }
 
-    #backlink-blog a {
+    #backlink-novel a {
       text-decoration: none;
       color: inherit;
       display: inline-block;
@@ -46,7 +47,7 @@
       transition: background-color 0.3s ease;
     }
 
-    #backlink-blog a:hover {
+    #backlink-novel a:hover {
       background-color: var(--color-accent); /* Original accent color for hover */
       color: white;
     }
@@ -66,7 +67,7 @@
     }
 
     @media (max-width: 768px) {
-      #backlink-blog {
+      #backlink-novel {
         font-size: 1.1rem; /* Consistent with conclusion.html */
         padding: 12px 0; /* Consistent with conclusion.html */
       }
@@ -87,10 +88,35 @@
           padding-top: 60px; /* Adjust padding for smaller screens */
       }
     }
+
+    /* --- Styles for the button at the bottom --- */
+    .github-button {
+      display: inline-block; /* Make it a button, not a banner */
+      text-decoration: none;
+      color: white; /* Match text color of the banner */
+      background-color: #5c3a1e; /* Match background color of the banner */
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      font-family: cursive, "Brush Script MT", "Lucida Handwriting", sans-serif; /* Match font of the banner */
+      transition: all 0.3s ease;
+      margin-top: 40px;
+    }
+
+    .github-button:hover {
+      background-color: #3e2a14; /* Match hover color of the banner */
+      color: white;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
-  <div id="backlink-blog">
+  <div id="backlink-novel">
     <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#generative-novel-panel">
       Back to Documentation
     </a>
@@ -108,6 +134,12 @@
     <p>To overcome the development constraints, we adapted our original design, creating a more simplified yet still aesthetically pleasing website. The final layout effectively presents the narrative on both desktop and mobile devices, with a clear separation of images and text. For example, on desktop, images are displayed on the left and text on the right, while on mobile, images occupy the top two-thirds of the screen with the text below. A key technical solution was linking the images and text dynamically, ensuring that reordering the poem's stanzas would automatically update the corresponding image order. While the issue of character consistency in the images could not be fully resolved, our focus on a consistent visual style over perfect character replication allowed the project to move forward.</p>
     <h2>Conclusion</h2>
     <p>This project served as a significant learning experience, highlighting both the power and the limitations of AI in a creative collaboration. The experience taught us how to effectively use AI as a tool for generating creative content and how to adapt original design goals to fit practical development constraints. Moreover, it reinforced the importance of focusing on core project goals, such as the overall presentation of the story, especially when working with models that may have their own limitations. The final product, therefore, successfully merges a generative narrative with a unique visual style, demonstrating the potential of a hybrid creative process.</p>
-</div>
+
+    <div class="button-container">
+      <a href="https://github.com/hbk-bs/a-generative-graphic-novel-finima" class="github-button">
+          View the GitHub Repository
+      </a>
+  </div>
+  </div>
 </body>
 </html>

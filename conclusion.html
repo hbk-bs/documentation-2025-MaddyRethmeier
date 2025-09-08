@@ -19,7 +19,7 @@
             padding: 50px 0 0 0; /* Added padding-top to account for fixed backlink */
         }
 
-        #backlink-ecommerce {
+        #backlink-conclusion {
             width: 100%;
             background-color: #6b31d0;
             padding: 10px 0;
@@ -37,7 +37,7 @@
             z-index: 1000; /* Ensure it's on top */
         }
 
-        #backlink-ecommerce a {
+        #backlink-conclusion a {
             text-decoration: none;
             color: inherit;
             display: inline-block;
@@ -45,7 +45,7 @@
             transition: background-color 0.3s ease;
         }
 
-        #backlink-ecommerce a:hover {
+        #backlink-conclusion a:hover {
             background-color: var(--color-accent);
             color: white;
         }
@@ -63,10 +63,35 @@
         .content p {
             color: #4f2598;
         }
+        
+        /* Styles for the button at the bottom */
+        .github-button {
+            display: inline-block; /* Make it a button, not a banner */
+            text-decoration: none;
+            color: white; /* Match text color of the banner */
+            background-color: #6b31d0; /* Match background color of the banner */
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            font-family: "American Typewriter", "Courier New", monospace, serif;
+            transition: all 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .github-button:hover {
+            background-color: #6d28d9; /* Same hover effect as the banner */
+            color: white;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
 
         /* Responsive styling for mobile */
         @media (max-width: 768px) {
-            #backlink-ecommerce {
+            #backlink-conclusion {
                 font-size: 1.1rem;
                 padding: 12px 0;
             }
@@ -90,7 +115,7 @@
     </style>
 </head>
 <body>
-    <div id="backlink-ecommerce">
+    <div id="backlink-conclusion">
         <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#conclusion-panel">
             Back to Documentation
         </a>
@@ -108,5 +133,12 @@
     <p>My experience with AI image models was particularly eye-opening. While they could create some impressive visuals, it was an almost impossible task to achieve any kind of character consistency across different images. The models struggled to keep a consistent face, body, or expression, which was frustrating for storytelling projects. Furthermore, the operational costs of these models are a significant factor, making them not very practical for long, creative projects. Nevertheless, my theoretical knowledge from class about how LLMs work helped me understand why some prompts were successful and why some tasks were simply too complex for them to handle.</p>
     <h2>Conclusion</h2>
     <p>All in all, this semester's curriculum was much tougher, but it was also far more engaging. The projects were not just about creating a generative story or a unique app; they were a huge lesson in creative collaboration and adapting to real-world limitations. This experience showed me that a thoughtful, hybrid approach—using AI for the general creative work and manual coding for the specific details—leads to a better and more organised final product. Due to the fact that the projects given were more complex and challenging than in the first semester, I spend much more time working on the individual tasks. Furthermore, I, personally, found these projects far more appealing and intriguing, and I enjoyed working on them immensely.</p>
+    
+    <div class="button-container">
+        <a href="https://github.com/hbk-bs/documentation-2025-MaddyRethmeier" class="github-button">
+            View the GitHub Repository
+        </a>
+    </div>
+</div>
 </body>
 </html>

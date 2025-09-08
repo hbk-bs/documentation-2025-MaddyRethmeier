@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Maddy's Archive Feedback</title>
-    <meta name="theme-color" content="#74d1ff"> <style>
+    <meta name="theme-color" content="#74d1ff">
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Iowan+Old+Style&display=swap');
 
         :root {
@@ -20,7 +21,7 @@
         }
 
         /* Backlink styles identical to conclusion.html template, preserving original colors and font */
-        #backlink-ecommerce {
+        #backlink-archive {
             width: 100%;
             background-color: #74d1ff; /* Original background color for backlink */
             padding: 10px 0;
@@ -38,7 +39,7 @@
             z-index: 1000; /* Ensure it's on top */
         }
 
-        #backlink-ecommerce a {
+        #backlink-archive a {
             text-decoration: none;
             color: inherit;
             display: inline-block;
@@ -46,9 +47,34 @@
             transition: background-color 0.3s ease;
         }
 
-        #backlink-ecommerce a:hover {
+        #backlink-archive a:hover {
             background-color: var(--color-accent); /* Original accent color for hover */
             color: white;
+        }
+
+        /* Styles for the button at the bottom */
+        .github-button {
+            display: inline-block; /* Make it a button, not a banner */
+            text-decoration: none;
+            color: white; /* Match text color of the banner */
+            background-color: #74d1ff; /* Match background color of the banner */
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+            transition: all 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .github-button:hover {
+            background-color: var(--color-accent); /* Same hover effect as the banner */
+            color: white;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
         }
 
         h1, h2 {
@@ -67,7 +93,7 @@
 
         /* Responsive styling for mobile */
         @media (max-width: 768px) {
-            #backlink-ecommerce {
+            #backlink-archive {
                 font-size: 1.1rem; /* Consistent with conclusion.html */
                 padding: 12px 0; /* Consistent with conclusion.html */
             }
@@ -91,25 +117,31 @@
     </style>
 </head>
 <body>
-    <div id="backlink-ecommerce">
-            <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#maddys-archive-panel">
-                Back to Documentation
+    <div id="backlink-archive">
+        <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#maddys-archive-panel">
+            Back to Documentation
+        </a>
+    </div>
+
+    <div class="content">
+        <h1>Maddy's Archive Feedback</h1>
+        <h2>Objective</h2>
+        <p>The goal of the "Maddy's Archive" project was to build a digital portfolio showcasing the creative work from my first semester. Ultimately, the aim was to create a single, cohesive, and visually appealing representation of my output, with particular attention paid to the aesthetic and organisational structure of the work.</p>
+
+        <h2>Design & Implementation</h2>
+        <p>A consistent visual identity was a top priority, which was successfully achieved with a cohesive blue colour scheme that remains a core strength of the project. Initial development focused on the desktop experience, thereby leading to a simple, intuitive navigation system that makes it easy for users to find projects on larger screens. A key constraint, in addition, was the deliberate decision to limit the use of generative AI for both the archive and the featured projects.</p>
+
+        <h2>Problems & Solutions</h2>
+        <p>The project faced some challenges, particularly with user experience and technical performance. The most significant issue was the poor mobile responsiveness. The desktop-first design caused alignment and layout problems on smaller screens, consequently making the interface less effective. Another challenge was the project-to-project navigation, which was unnecessarily tedious. While the main site navigation works well, moving between individual projects requires too many steps.</p>
+
+        <h2>Reflection</h2>
+        <p>"Maddy's Archive" is a strong first attempt at creating a digital portfolio. Its visual design and straightforward navigation are effective, but the issues with mobile responsiveness and internal navigation show clear opportunities for growth. Ultimately, this project has taught me the importance of designing for all devices from the very beginning.</p>
+
+        <div class="button-container">
+            <a href="https://github.com/hbk-bs/the-archives-MaddyRethmeier" class="github-button">
+                View the GitHub Repository
             </a>
         </div>
-    
-        <div class="content">
-            <h1>Maddy's Archive Feedback</h1>
-            <h2>Objective</h2>
-            <p>The goal of the "Maddy's Archive" project was to build a digital portfolio showcasing the creative work from my first semester. Ultimately, the aim was to create a single, cohesive, and visually appealing representation of my output, with particular attention paid to the aesthetic and organisational structure of the work.</p>
-    
-            <h2>Design & Implementation</h2>
-            <p>A consistent visual identity was a top priority, which was successfully achieved with a cohesive blue colour scheme that remains a core strength of the project. Initial development focused on the desktop experience, thereby leading to a simple, intuitive navigation system that makes it easy for users to find projects on larger screens. A key constraint, in addition, was the deliberate decision to limit the use of generative AI for both the archive and the featured projects.</p>
-    
-            <h2>Problems & Solutions</h2>
-            <p>The project faced some challenges, particularly with user experience and technical performance. The most significant issue was the poor mobile responsiveness. The desktop-first design caused alignment and layout problems on smaller screens, consequently making the interface less effective. Another challenge was the project-to-project navigation, which was unnecessarily tedious. While the main site navigation works well, moving between individual projects requires too many steps.</p>
-    
-            <h2>Reflection</h2>
-            <p>"Maddy's Archive" is a strong first attempt at creating a digital portfolio. Its visual design and straightforward navigation are effective, but the issues with mobile responsiveness and internal navigation show clear opportunities for growth. Ultimately, this project has taught me the importance of designing for all devices from the very beginning.</p>
-         </div>
+    </div>
 </body>
 </html>

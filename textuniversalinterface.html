@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Text the Universal Interface Feedback</title>
-    <meta name="theme-color" content="#800000"> <style>
+    <meta name="theme-color" content="#800000"> 
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
 
         :root {
-            --color-accent: #660000; /* Original accent for textuniversalinterface */
+            --color-accent: #660000;
         }
 
         /* Backlink styles identical to conclusion.html template, preserving original colors and font */
-        #backlink-todo {
+        #backlink-ao3 {
             width: 100%;
-            background-color: #800000; /* Original background color for backlink */
+            background-color: #800000;
             padding: 10px 0;
             color: white;
             font-size: 1rem;
@@ -22,40 +23,40 @@
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             box-sizing: border-box;
-            font-family: Georgia, 'Times New Roman', Times, serif; /* Original font family for backlink */
-            position: fixed; /* Changed to fixed */
-            top: 0; /* Pinned to top */
-            left: 0; /* Pinned to left */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: fixed;
+            top: 0;
+            left: 0;
             transform: none;
-            z-index: 1000; /* Ensure it's on top */
+            z-index: 1000;
         }
-        #backlink-todo a {
+        #backlink-ao3 a {
             text-decoration: none;
             color: inherit;
             display: inline-block;
             padding: 0 15px;
             transition: background-color 0.3s ease;
         }
-        #backlink-todo a:hover {
-            background-color: var(--color-accent); /* Original accent color for hover */
+        #backlink-ao3 a:hover {
+            background-color: var(--color-accent);
             color: white;
         }
 
         /* Specific styles for this feedback page */
         body {
-            font-family: Georgia, 'Times New Roman', Times, serif; /* Original font for body */
-            background-color: #f0f0f0; /* Original background color */
-            color: #990000; /* Original body text color */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+            color: #990000;
             margin: 0;
-            padding: 50px 0 0 0; /* Added padding-top to account for fixed backlink */
+            padding: 50px 0 0 0;
         }
 
         h1, h2 {
-            color: #660000; /* Original H1 and H2 color */
+            color: #660000;
         }
 
         p {
-            color: #990000; /* Original paragraph text color */
+            color: #990000;
         }
 
         .content {
@@ -65,31 +66,56 @@
         }
         
         @media (max-width: 768px) {
-            #backlink-todo {
-                font-size: 1.1rem; /* Consistent with conclusion.html */
-                padding: 12px 0; /* Consistent with conclusion.html */
+            #backlink-ao3 {
+                font-size: 1.1rem;
+                padding: 12px 0;
             }
 
             h1 {
-                font-size: 1.5rem; /* Consistent with conclusion.html */
+                font-size: 1.5rem;
             }
 
             h2 {
-                font-size: 1.3rem; /* Consistent with conclusion.html */
+                font-size: 1.3rem;
             }
 
             p {
-                font-size: 1rem; /* Consistent with conclusion.html */
-                line-height: 1.6; /* Consistent with conclusion.html */
+                font-size: 1rem;
+                line-height: 1.6;
             }
             body {
-                padding-top: 60px; /* Adjust padding for smaller screens */
+                padding-top: 60px;
             }
+        }
+        
+        /* Styles for the button at the bottom */
+        .github-button {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #800000;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: all 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .github-button:hover {
+            background-color: #660000;
+            color: white;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="backlink-todo">
+    <div id="backlink-ao3">
         <a href="https://hbk-bs.github.io/documentation-2025-MaddyRethmeier/index.html#text-universal-interface-panel">Back to Documentation</a>
     </div>
     
@@ -103,6 +129,12 @@
         <p>The most significant challenge was maintaining the chatbot's behavioural consistency. I had to develop a robust prompt that would prevent the chatbot from breaking its stylistic constraints, even when faced with user attempts to disrupt its designed output. This was resolved by implementing explicit guardrails into the prompt itself. A separate, and arguably greater, challenge was the initial difficulty in determining the appropriate level of specificity for the chatbot's prompts. This was streamlined through an iterative process of prompt engineering, where I used another AI to collaboratively refine the initial prompt.</p>
         <h2>Conclusion</h2>
         <p>This project served as a valuable exercise in designing a highly constrained AI. It demonstrated that successful outcomes depend not only on the core functionality but also on the precision of the prompt and the robustness of the system's behavioural rules. The experience highlighted the importance of prompt engineering as a critical skill, showing that a well-crafted prompt can significantly improve an AI's performance and efficiency. Furthermore, the project underscored the need to anticipate and mitigate user attempts to "break" the system, ensuring that the chatbot's unique persona remains consistent and intact. This creative constraint ultimately led to a more polished and reliable final product.</p>
+    
+        <div class="button-container">
+            <a href="https://github.com/hbk-bs/text-the-universal-interface-MaddyRethmeier" class="github-button">
+                View the GitHub Repository
+            </a>
+        </div>
     </div>
 </body>
 </html>
